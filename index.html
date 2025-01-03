@@ -223,9 +223,96 @@ body {
   color: #2c3e50;
   margin-bottom: 20px;
 }
-  </style>
+  
+html {
+  scroll-behavior: smooth;
+}
+
+.highlight {
+  font-weight: bolder;
+  color: #111;
+  display: list-item;
+  list-style-type: disc;
+}
+
+.toc {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  width: 180px; /* Smaller width for a minimalist look */
+  background-color: #ffffff; /* Pure white for a clean design */
+  border: 1px solid #eaeaea; /* Subtle border for separation */
+  border-radius: 6px; /* Slight rounding for modern feel */
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Minimal shadow for depth */
+  font-size: 0.9rem; /* Smaller font size for compactness */
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin-bottom: 8px; /* Tight spacing for a compact list */
+}
+
+.toc li a {
+  display: block;
+  text-align: left; /* Align text naturally */
+  background-color: #f5f5f5; /* Light gray for subtle button style */
+  color: #333; /* Dark text for readability */
+  text-decoration: none;
+  padding: 8px 10px; /* Smaller padding for compact buttons */
+  border-radius: 4px; /* Subtle rounding */
+  font-weight: 500; /* Slightly bold for emphasis */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.toc li a:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+  transform: translateY(-1px); /* Gentle lift effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+}
+
+/* Responsive Design for TOC */
+@media (max-width: 768px) {
+  .toc {
+    position: static;
+    margin: 10px auto;
+    width: 100%; /* Full width for small screens */
+    box-shadow: none; /* Simplify for mobile */
+    border: none; /* Remove border for simplicity */
+  }
+
+  .toc li a {
+    font-size: 0.85rem; /* Slightly smaller font for mobile */
+    padding: 6px 8px; /* Adjust padding for compact design */
+  }
+}
+</style>
 </head>
 <body>
+
+
+  <nav class="toc">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#agape-feasts">Agape Feasts</a></li>
+      <li><a href="#ancillary-activities">Ancillary Activities</a></li>
+      <li><a href="#baptism">Baptism</a></li>
+      <li><a href="#catechesis-and-instruction">Catechesis and Instruction</a></li>
+      <li><a href="#fasting">Fasting</a></li>
+      <li><a href="#martyrs-commemorations">Martyrs' Commemorations</a></li>
+      <li><a href="#pascha">Pascha</a></li>
+      <li><a href="#pentecost">Pentecost</a></li>
+      <li><a href="#lords-day">The Lord's Day</a></li>
+    </ul>
+  </nav>
+  
+</nav>
+
   <div class="container">
     <h1 class="centre_me"><span lang="en-ca">Early Christian Celebrations</span></h1>
 
@@ -244,7 +331,7 @@ body {
       </div>
     </div>
     <p class="auto-style5">&nbsp;</p>
-    <h1><span class="auto-style6" lang="en-ca">Introduction</span></h1>
+    <h1 id="introduction"><span class="auto-style6" lang="en-ca">Introduction</span></h1>
     <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
       <p>Christianity in its earliest centuries (before A.D. 325) was marked by simplicity, deep spirituality, and a strong communal focus. Rooted in the life and teachings of Jesus Christ, the early Church adapted Jewish traditions to reflect the new covenant, creating practices that were profound expressions of faith, unity, and hope, often carried out under persecution.</p>
       <p>This exploration draws from 1st and 2nd-century writings, including The Didache (c. 100 A.D.), Tertullian’s De Corona and Apologeticus (c. 197 A.D.), Hippolytus’ Apostolic Tradition (c. 215 A.D.), Ignatius of Antioch’s Letter to the Smyrnaeans (c. 110 A.D.), Irenaeus’ Against Heresies (c. 180 A.D.), Pliny’s Epistles (c. 112 A.D.), The Martyrdom of Polycarp (c. 156 A.D.), and the New Testament. These sources reveal the spiritual life of early Christians, their celebrations, and their unwavering commitment to Christ.</p>
@@ -254,7 +341,7 @@ body {
     </div>
 
     <!-- Agape Feasts Section -->
-<h1 class="auto-style1">Agape Feasts</h1>
+<h1 id="agape-feasts" class="auto-style1">Agape Feasts</h1>
 <p><em><span class="auto-style3">No fixed date, a flexible practice, or tied to other Christian events</span></em></p>
 
 <!-- Image and Caption -->
@@ -276,7 +363,7 @@ body {
 <!-- Agape Feasts Section -->
 
  <!-- Ancillary Activities Section -->
-<h1 class="auto-style1">Ancillary Activities</h1>
+<h1 id="ancillary-activities" class="auto-style1">Ancillary Activities</h1>
 <p><em><span class="auto-style3">No fixed date, as needed basis</span></em></p>
 <!-- Image and Caption -->
 <!--
@@ -294,7 +381,7 @@ body {
 <!-- Ancillary Activities Section -->
 
 <!-- Baptism Section -->
-<h1 class="auto-style1">Baptism</h1>
+<h1 id="baptism" class="auto-style1">Baptism</h1>
 <p><em><span class="auto-style3">No fixed date, could be standalone event, or tied to other Christian events</span></em></p>
 
 <!-- Image and Caption -->
@@ -315,7 +402,7 @@ body {
 
 <!-- Catechesis and Instruction Section -->
 
-<h1 class="auto-style1">Catechesis and Instruction</h1>
+<h1 id="catechesis-and-instruction" class="auto-style1">Catechesis and Instruction</h1>
 <p><em><span class="auto-style3">No fixed date, solely to be done pre-baptismal</span></em></p>
 
 <!-- Image and Caption -->
@@ -338,7 +425,7 @@ body {
 <!-- Catechesis and Instruction Section -->
 
 <!-- Fasting Section -->
-<h1 class="auto-style1"><span lang="en-ca">Fasting</span></h1>
+<h1 id="fasting" class="auto-style1"><span lang="en-ca">Fasting</span></h1>
 <p><em><span class="auto-style3">Wednesdays and Fridays</span></em></p>
 
 <!-- Image and Caption -->
@@ -354,7 +441,7 @@ body {
 <!-- Fasting Section -->
 
 <!-- Martyrs' Commemorations Section -->
-<h1 class="auto-style1">Martyrs' Commemorations</h1>
+<h1 id="martyrs-commemorations" class="auto-style1">Martyrs' Commemorations</h1>
 <p><em><span class="auto-style3">Earthly death date of the martyr</span></em></p>
 
 <!-- Image and Caption -->
@@ -374,7 +461,7 @@ body {
 
     <!-- Pascha Section -->
     <div class="clearfix">
-      <h1 class="auto-style1">Pascha</h1>
+      <h1 id="pascha" class="auto-style1">Pascha</h1>
     <p><span class="auto-style3">20 April 2025 and 5 April 2026</span></p>
     
     <!-- Image and Caption -->
@@ -399,7 +486,7 @@ body {
         <!-- Pascha Section -->
 
             <!-- Pentecost Section -->
-<h1 class="auto-style1">Pentecost</h1>
+<h1 id="pentecost" class="auto-style1">Pentecost</h1>
 <p><em><span class="auto-style3">1 June 2025 and 21 May 2026</span></em></p>
 
 <!-- Image and Caption -->
@@ -428,7 +515,7 @@ body {
 
     <!-- The Lord's Day Section -->
     <div class="clearfix">
-      <h1 class="auto-style1">The Lord's Day</h1>
+      <h1 id="lords-day" class="auto-style1">The Lord's Day</h1>
       <p><em><span class="auto-style3">Every Sunday<span lang="en-ca"> </span></span></em></p>
 
       <!-- Image and Caption -->
@@ -457,5 +544,88 @@ body {
 
 
   </div>
+<script>
+
+  
+
+// array of the links in the toc (table of content) block
+var toc;
+// array of content (links are refers to the content)
+var content = [];
+
+// call prepare function for while page is loaded complete
+document.addEventListener('DOMContentLoaded', function () {
+    prepare();
+    sync();
+}, false);
+
+/**
+ * this function get all toc (table of content) links and content 
+ * and save theme
+ */
+function prepare() {
+    // get all toc (table of content) links
+    toc = document.querySelectorAll('.toc a');
+    // get content so that link refer to it
+    toc.forEach(function (link) {
+        var id = link.getAttribute("href");
+        var element = document.querySelector(id);
+        content.push(element);
+    });
+    // sync toc (table of content) whit part of content that is 
+    // visible into viewport while user scroll
+    window.addEventListener("scroll", sync, false);
+}
+
+
+/**
+ * this function check if element is visible in viewport 
+ * 
+ * @argument {String} element which we need to check it 
+ * @returns true if element is visible in viewport else return false 
+ */
+function isElementInViewport(element) {
+    // get element position
+    var rect = element.getBoundingClientRect();
+
+    // return true if a partial of the element is visible
+    return (rect.bottom >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight));
+
+    // for while we need check if all off the element is visible in viewport
+    // return (rect.top >= 0 &&
+    //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+}
+
+/**
+ * this function highlight toc (table of content) links which is visible in viewport
+ */
+function sync() {
+    // check all content 
+    for (var i = 0; i < content.length; i++) {
+        // if content is visible if viewport highlight it 
+        // else remove highlight from it
+        if (isElementInViewport(content[i])) {
+            toc[i].classList.add('highlight');
+        } else {
+            toc[i].classList.remove('highlight');
+        }
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('.toc');
+    const toggleBtn = document.querySelector('.toggle-toc-btn');
+
+    toggleBtn.addEventListener('click', () => {
+      if (toc.classList.contains('hidden')) {
+        toc.classList.remove('hidden');
+        toggleBtn.textContent = 'Hide TOC';
+      } else {
+        toc.classList.add('hidden');
+        toggleBtn.textContent = 'Show TOC';
+      }
+    });
+  });
+</script>
 </body>
 </html>
