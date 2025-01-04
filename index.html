@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Early Christian Repository</title>
-  <style>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Christian Repository</title>
+    <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.8;
@@ -143,64 +143,47 @@
   }
 }
   </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to Early Christian Repository</h1>
-    <p class="centeretext"><em>VERSE OF THE DAY</em></p>
-    <p class="centeretext" id="random-bible-passage"></p>
-    <p>
-      Discover the fascinating traditions and practices of the early Christian Church, 
-      rooted in the life and teachings of Jesus Christ. Explore the topics below:
-    </p>
-    <ul class="article-list">
-      <li>
-        <a href="celebrations.html">
-          <div class="article-item">
-            <h2>Early Christian Celebrations</h2>
-            <p class="metadata">By John Doe | January 1, 2025</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="head_coverings.html">
-          <div class="article-item">
-            <h2>Head Coverings in Early Christianity</h2>
-            <p class="metadata">By Ryan Reeves | January 3, 2025</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="article3.html">
-          <div class="article-item">
-            <h2>Article Title Placeholder</h2>
-            <p class="metadata">By Author Name | Date</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="article4.html">
-          <div class="article-item">
-            <h2>Article Title Placeholder</h2>
-            <p class="metadata">By Author Name | Date</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="article5.html">
-          <div class="article-item">
-            <h2>Article Title Placeholder</h2>
-            <p class="metadata">By Author Name | Date</p>
-          </div>
-        </a>
-      </li>
-    </ul>
-    
-    <div class="nav-bar">
-      <a href="final.html">Explore More</a>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Early Christian Repository</h1>
+      <p>Articles</p>
+      <p class="centeretext" id="random-bible-passage"></p>
+      <ul class="article-list">
+        <li> <a href="celebrations.html">
+            <div class="article-item">
+              <h2>Early Christian Celebrations</h2>
+              <p class="metadata">By Ryan Reeves | January 2, 2025</p>
+            </div>
+          </a> </li>
+        <li> <a href="head_coverings.html">
+            <div class="article-item">
+              <h2>Head Coverings in Early Christianity</h2>
+              <p class="metadata">By Ryan Reeves | January 3, 2025</p>
+            </div>
+          </a> </li>
+        <li> <a href="article3.html">
+            <div class="article-item">
+              <h2>Article Title Placeholder</h2>
+              <p class="metadata">By Author Name | Date</p>
+            </div>
+          </a> </li>
+        <li> <a href="article4.html">
+            <div class="article-item">
+              <h2>Article Title Placeholder</h2>
+              <p class="metadata">By Author Name | Date</p>
+            </div>
+          </a> </li>
+        <li> <a href="article5.html">
+            <div class="article-item">
+              <h2>Article Title Placeholder</h2>
+              <p class="metadata">By Author Name | Date</p>
+            </div>
+          </a> </li>
+      </ul>
+      <div class="nav-bar"> <a href="final.html">Explore More</a> </div>
     </div>
-  </div>
-  <script>
+    <script>
     const apiUrl = "https://bible-api.com/";
   
     // List of random references
@@ -227,6 +210,5 @@
         document.getElementById("random-bible-passage").textContent = "Error fetching Bible verse.";
       });
   </script>
-  
-</body>
+  </body>
 </html>
