@@ -454,6 +454,68 @@ html {
   color: #333;
   line-height: 1.6;
 }
+/* Container for all author boxes */
+.author-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Reduced gap for compactness */
+  padding: 15px;
+  justify-content: center;
+}
+
+/* Individual author box */
+.author-box {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px; /* Reduced padding */
+  width: calc(33.333% - 20px); /* 3 boxes per row with gap */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.author-box:hover {
+  transform: translateY(-3px); /* Subtle hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Author name */
+.author-box h2 {
+  font-size: 1.2em; /* Smaller font size */
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Work, Year, Region details */
+.author-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.author-box ul li {
+  margin: 6px 0; /* Reduced margin */
+  font-size: 0.9em; /* Smaller font size */
+  color: #555;
+}
+
+.author-box ul li strong {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .author-box {
+    width: calc(50% - 15px); /* 2 boxes per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .author-box {
+    width: 100%; /* 1 box per row on mobile */
+  }
+}
   </style>
   </head>
   <body>
@@ -464,15 +526,17 @@ html {
     <nav class="toc">
       <ul>
         <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#biblical-basis">Biblical Basis</a></li>
+        <li><a href="#biblical-basis">Background</a></li>
         <li><a href="#analysis">Analysis of Text</a></li>
-        <li><a href="#ecf">Early Christian figures affirm the practice</a></li>
+        <li><a href="#ecf">Early Christian Leaders</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </nav>
     <div class="container">
       <h1 class="centre_me">Head Coverings in Early Christianity</h1>
       <div class="header-container">
-        <div class="circle-image"> <img src="https://russianicons.wordpress.com/wp-content/uploads/2014/08/jesus4thcencommodilla.jpg"
+        <div class="circle-image"> <img src="https://russianicons.wordpress.com/wp-content/uploads/2014/08/jesus4thcencommodilla.jpg"
+
             alt="Profile"> </div>
         <div class="header-text">
           <p><em>By Ryan Reeves</em></p>
@@ -488,14 +552,12 @@ html {
             Corinthians, which appears in the New Testament as <em>1
               Corinthians 11</em>.</p>
         </div>
-        <p style="text-align: justify;"></p>
         <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">
           <p>Thus, early Christian communities, following Paul’s instruction,
             required women to pray with their heads covered as a symbol of
             honor, authority, and alignment with divine order, while men were to
             pray uncovered.</p>
         </div>
-        <p style="text-align: justify;"></p>
         <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
           <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
             <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">
@@ -507,11 +569,8 @@ html {
                 This evidence highlights the consistency of the practice across
                 geographical, cultural, and theological contexts over time.</p>
             </div>
-            <p></p>
           </div>
-          <p></p>
         </div>
-        <p></p>
       </div>
       <h1 id="biblical-basis">Background</h1>
       <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">
@@ -532,37 +591,33 @@ html {
             letter was likely written between 50 and 58 C.E. during Paul’s
             ministry in Ephesus.</p>
           <b>Intended Audience </b>
-          <p style="text-align: justify;">Modern interpretations (Mostly Bob,
-            Mack and Adam) of 1 Corinthians 11 often mistakenly assume its
-            instructions were only relevant to the Corinthian church. However,
-            Paul frequently intended his letters to be circulated among other
-            Christian communities. </p>
+          <p style="text-align: justify;">Modern interpretations of 1
+            Corinthians 11 often mistakenly assume its instructions were only
+            relevant to the Corinthian church. However, Paul frequently intended
+            his letters to be circulated among other Christian communities. </p>
           <p style="text-align: justify;">1. This is evident in the beginning of
             his first epistle, namely 1 Corinthians 1:2, where Paul addresses
             his letter not only to the church in Corinth, but also to all church
             bodies:</p>
-          <p style="text-align: justify;"></p>
           <blockquote> <em>2. To the assembly of God that is in Corinth, to
               those sanctified in Christ Jesus, called saints, with all those
               calling on the Name of our Lord Jesus Christ in every place—both
               theirs and ours:</em> </blockquote>
-          <p></p>
           <p style="text-align: justify;">2. Furthermore, it is evidenced in
             Colossians 4:16, where he explicitly instructs the Colossians to
             share his letter with the church in Laodicea and to read the letter
             from Laodicea in return:</p>
-          <p style="text-align: justify;"></p>
           <blockquote> <em>16. And when this letter may be read with you, cause
               that it may be read also in the assembly of the Laodiceans, and
               that you also may read that from Laodicea.</em> </blockquote>
-          <p></p>
         </div>
         <h1 id="analysis">Analysis</h1>
         <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
           <div class="sleek-box">
-            <details open="">
-              <summary style="background-color: #6b6c6c;">If you'd like to read
-                an analysis on 1 Cor 11 verse by verse, click this.</summary>
+            <details>
+              <summary style="background-color: #6c7a89;">If you'd like to
+                explore a detailed, verse-by-verse analysis of 1 Corinthians 11,
+                click here.</summary>
               <div class="explanation">
                 <h2>Verse 2: Praise for Faithfulness</h2>
                 <p>Paul praises the Corinthians for remembering his teachings
@@ -580,7 +635,8 @@ html {
                   should pray covered, as a matter of honor.</p>
                 <blockquote>
                   <p><span class="verse-ref">5.</span> Every man praying or
-                    prophesying, having the head covered, dishonors his head, <span
+                    prophesying, having the head covered, dishonors his head, <span
+
                       class="verse-ref">6.</span> and every woman praying or
                     prophesying with the head uncovered, dishonors her own head,
                     for it is one and the same thing with her being shaven. For
@@ -598,7 +654,8 @@ html {
                   <p><span class="verse-ref">7.</span> For a man, indeed, ought
                     not to cover the head, being the image and glory of God, and
                     a woman is the glory of a man, <span class="verse-ref">8.</span>
-                    for a man is not of a woman, but a woman is of a man, <span
+                    for a man is not of a woman, but a woman is of a man, <span
+
                       class="verse-ref">9.</span> for also was a man not created
                     because of the woman, but a woman because of the man.</p>
                 </blockquote>
@@ -664,276 +721,209 @@ html {
               </div>
             </details>
           </div>
-          <h1 id="spiritual-significance">Practice among communities</h1>
+          <h1 id="spiritual-significance">Practice Among Communities</h1>
           <p><b>Regions</b></p>
           <p>During the first three centuries of Christianity, the practice of
             women wearing head coverings became an established norm in key
-            regions, including Rome, Antioch, and Carthage in Africa.<sup><span
+            regions, including Rome, Antioch, and Carthage in Africa.<sup><span
+
                 class="ref">REF<span class="ref-box"> Johnson, Lewis. (1962).
                   The Wycliffe Bible Commentary. Chicago: Moody Press. pp.
                   1247–1248. </span></span></sup></p>
-          <p><b>Artwork</b></p>
-          <p>Artistic evidence shows women wearing head coverings during
-            worship. In the 1st century, frescoes in the Roman catacombs of
-            Priscilla and Domitilla depict veiled women praying. By the 3rd
-            century, mosaics in Dura-Europos, Syria, show veiled women in
-            worship. In the 4th century, Christian sarcophagi in Rome, like the
-            Sarcophagus of the Good Shepherd, feature veiled women in biblical
-            scenes, while frescoes in Ephesus and Cappadocia catacombs depict
-            veiled figures, including Mary, in worship. Mosaics in the Basilica
-            of St. John in Ephesus further confirm this practice.<sup><span class="ref">REF<span
-                  class="ref-box"> <strong>3rd Century</strong><br>
-                  Dura-Europos Mosaics (Syria): Mosaics portray veiled women in
-                  worship scenes, including the Procession of the Holy Women in
-                  the Christian house church.<br>
-                  <br>
-                  <strong>4th Century</strong><br>
-                  Christian Sarcophagi (Rome, Italy): Sarcophagi, such as the
-                  Sarcophagus of the Good Shepherd, feature veiled women in
-                  biblical narratives.<br>
-                  Ephesus Frescoes (Asia Minor): Frescoes show veiled women in
-                  worship.<br>
-                  Cappadocia Catacombs (Asia Minor): Depictions of veiled
-                  biblical figures, including Mary.<br>
-                  Basilica of St. John (Ephesus, Asia Minor): Mosaics depict
-                  veiled women in worship.<br>
-                  <br>
-                  <strong>5th Century</strong><br>
-                  Cappella di Sant’Andrea (Archiepiscopal Museum, Ravenna,
-                  Italy) (495 AD): Mosaics of six female martyrs, including
-                  Cecilia and Felicitas, wearing veils.<br>
-                  <br>
-                  <strong>6th Century</strong><br>
-                  Basilica of San Vitale (Ravenna, Italy) (547 AD): Mosaics of
-                  Empress Theodora and her retinue, including veiled women, in a
-                  Eucharistic procession.<br>
-                  Basilica of Sant’Apollinare Nuovo (Ravenna, Italy) (556–569
-                  AD): The Procession of Virgins mosaic depicts veiled women in
-                  a liturgical procession.<br>
-                  Rabbula Gospels (6th century): Depict veiled women such as
-                  Mary Magdalene and the Virgin Mary in biblical scenes.<br>
-                </span></span></sup></p>
-          <p><b>Physical description of head covering</b></p>
-          <p>According to early Christian historian David Bercot (1992),
-            historical records indicate that the early churches universally
-            understood Paul to be referring to a cloth veil, not long hair. The
-            practice of Christian women wearing a cloth head covering was
-            consistently taught by the Church Fathers and observed throughout
-            Christian history (p. 68).<sup><span class="ref">REF<span class="ref-box">
-                  Bercot, David W. (1992). Common Sense: A New Approach to
-                  Understanding Scripture. Scroll Publishing Co. p. 68. ISBN
-                  978-0-924722-06-6. </span></span></sup></p>
-          <p></p>
-          <h1 id="ecf">Early Christian figures affirm the practice</h1>
-          <p></p>
-          <p></p>
         </div>
-        <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
-          <cite></cite>
-          <p>There is a clear consensus among early Christian writers that head
-            coverings are to be observed. The literature affirming this practice
-            spans a wide geographical area, diverse theological perspectives,
-            and an extensive time period, from the 1st to the 5th century.</p>
-          <p>Here are some of the earliest and respected theologians' quotations
-            on the matter:</p>
-          <p><strong>Clement of Alexandria</strong> (c. 150 – c. 215 AD) was a
-            Christian apologist, presbyter in Alexandria, a missionary
-            theologian to the Hellenistic world, and the second known leader and
-            teacher of the Catechetical School of Alexandria. In his work <em>The
-              Instructor</em> (Paedagogus), he wrote:</p>
-          <p></p>
-          <h3></h3>
-          <div class="quote-container" style="--ds-md-zoom: 1.143;">
-            <blockquote class="quote-design">
-              <p>"Woman and man are to go to church ... Let the woman observe
-                this, further. Let her be entirely covered, unless she happen to
-                be at home. ... And she will never fall, who puts before her
-                eyes modesty, and her shawl ... For this is the wish of the
-                Word, since it is becoming for her to pray veiled."</p>
-              <p></p>
-              <p></p>
-              <footer class="quote-footer"><a href="https://www.logoslibrary.org/clement/instructor/311.html">—
-                  The Instructor, Book III, Chapter 11.<cite></cite><cite> </cite></a></footer>
-            </blockquote>
-          </div>
-          <p></p>
-          <p><br>
-          </p>
-          <p></p>
-          <p><b>Tertullian </b>(c. 160 AD - c. 240 AD) was a early Christian
-            author from Carthage in the Roman province of Africa. He is notable
-            for being the first Christian writer to produce an extensive body of
-            Latin Christian literature. He was also an influential apologist and
-            a fierce polemicist against heresy. In his work <em>On the Veiling
-              of Virgins</em> (circa 200 AD), he addresses the practice of women
-            covering their heads in church:</p>
-          <div class="quote-container" style="--ds-md-zoom: 1.143;">
-            <blockquote class="quote-design">
-              <p>"Is the reason she is allowed to go without a veil so that she
-                can stand out and be noticed as she enters the church? Is it so
-                she can show off her holiness by leaving her head uncovered? If
-                she deserves recognition, wouldn’t it be better to honor her
-                with some kind of leadership role or responsibility, rather than
-                letting her disregard the practice of covering her head?"</p>
-              <p></p>
-              <footer class="quote-footer"><a href="https://www.newadvent.org/fathers/0403.htm">—
-                  Tertullian, </a><cite><a href="https://www.newadvent.org/fathers/0403.htm">On
-                    the Veiling of Virgins, Chapter 9</a><br>
-                </cite></footer>
-            </blockquote>
-          </div>
-          <p><br>
-          </p>
-          <p><strong>Hippolytus of Rome</strong> (c. 170 – c. 235) was a bishop
-            of the church of Rome and one of the most significant Christian
-            theologians of the late second and early third centuries. Writing
-            around the year 215, he compiled a detailed record of the customs
-            and practices observed by the generations before him. In his work, <em>Apostolic
-              Tradition</em>, he includes the following statement:</p>
-          <p></p>
-        </div>
-        <div class="quote-container" style="--ds-md-zoom: 1.143;">
-          <blockquote class="quote-design">
-            <p>"All women should cover their heads with a proper veil, not just
-              a piece of thin linen, as that doesn’t count as a true covering."</p>
-            <footer class="quote-footer"><a href="https://www.stjohnsarlingtonva.org/Customer-Content/saintjohnsarlington/CMS/files/EFM/Apostolic_Tradition_by_Hippolytus.pdf">—
-                Hippolytus, </a><cite><a href="https://www.stjohnsarlingtonva.org/Customer-Content/saintjohnsarlington/CMS/files/EFM/Apostolic_Tradition_by_Hippolytus.pdf">Apostolic
-                  Tradition, Chapter 18 (verse 5)</a><br>
-              </cite></footer>
-          </blockquote>
-        </div>
-        <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
-          <p><br>
-          </p>
-          <p>The practice of head coverings is widely affirmed across early
-            Christian literature, reflecting a remarkable consensus that
-            transcends geographical, cultural, and theological boundaries. From
-            the 1st to the 5th century, writers from diverse regions—such as
-            Alexandria (Clement), Carthage (Tertullian), Rome (Hippolytus),
-            Caesarea (Origen and Basil), Antioch (John Chrysostom and
-            Theodoret), and Hippo (Augustine)—all emphasize the importance of
-            this practice. </p>
-          <table>
-            <thead>
-              <tr>
-                <th>Time Period</th>
-                <th>Author</th>
-                <th>Work</th>
-                <th>Year</th>
-                <th>Geographic Region</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- 1st–3rd Century Sources -->
-              <tr>
-                <td class="time-period">1st–3rd Century</td>
-                <td>Clement of Alexandria</td>
-                <td><a href="https://www.newadvent.org/fathers/02091.htm">The
-                    Instructor (Paedagogus)</a></td>
-                <td>191-202 AD</td>
-                <td>Alexandria, Egypt</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Tertullian</td>
-                <td><a href="https://www.documentacatholicaomnia.eu/03d/0160-0220,_Tertullianus,_De_Cultu_Feminarum_%5BSchaff%5D,_EN.pdf">De
-                    Cultu Feminarum (On the Apparel of Women)</a></td>
-                <td>circa 200 AD</td>
-                <td>Carthage, North Africa</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Tertullian</td>
-                <td><a href="https://www.newadvent.org/fathers/0403.htm">On the
-                    Veiling of Virgins</a></td>
-                <td>circa 200 AD</td>
-                <td>Carthage, North Africa</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Hippolytus of Rome</td>
-                <td><a href="https://www.stjohnsarlingtonva.org/Customer-Content/saintjohnsarlington/CMS/files/EFM/Apostolic_Tradition_by_Hippolytus.pdf">Apostolic
-                    Tradition</a></td>
-                <td>circa 215 AD</td>
-                <td>Rome, Italy</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Origen</td>
-                <td><a href="https://steveharris0.wordpress.com/wp-content/uploads/2012/10/origen-on-1-corinthians-fragments-1-5-11-english.pdf">Commentary
-                    on 1 Corinthians</a></td>
-                <td>248-254 AD</td>
-                <td>Caesarea, Palestine</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Didascalia Apostolorum</td>
-                <td><a href="https://agape-biblia.org/literatura/Didascalia-Apostolorum.pdf">Didascalia
-                    Apostolorum</a></td>
-                <td>230-250 AD</td>
-                <td>Syria (likely)</td>
-              </tr>
-              <!-- 4th–5th Century Sources -->
-              <tr>
-                <td class="time-period">4th–5th Century</td>
-                <td>Basil of Caesarea</td>
-                <td><a href="https://www.stnicholasoca.org/files/basil.pdf">Letters</a></td>
-                <td>circa 370 AD</td>
-                <td>Caesarea, Cappadocia</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>John Chrysostom</td>
-                <td><a href="https://www.newadvent.org/fathers/220126.htm">Homilies
-                    on 1 Corinthians</a></td>
-                <td>390-400 AD</td>
-                <td>Antioch, Syria</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Jerome</td>
-                <td><a href="https://www.newadvent.org/fathers/3001022.htm">Letter
-                    22</a></td>
-                <td>circa 385 AD</td>
-                <td>Bethlehem, Palestine</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Augustine</td>
-                <td><a href="https://files.romanroadsstatic.com/materials/romans/nicene-christianity/City%20of%20God.pdf">The
-                    City of God</a></td>
-                <td>circa 426 AD</td>
-                <td>Hippo, North Africa</td>
-              </tr>
-              <tr>
-                <td class="time-period"><br>
-                </td>
-                <td>Theodoret of Cyrus</td>
-                <td><a href="https://repositorio.sandamaso.es/bitstream/123456789/3292/1/04-hill.theodoret.79.99.pdf">Interpretation
-                    of the Letters of St. Paul</a></td>
-                <td>circa 450 AD</td>
-                <td>Cyrus, Syria</td>
-              </tr>
-            </tbody>
-          </table>
-          <p></p>
-          <p>These sources represent a variety of cultural contexts, from the
-            Hellenistic world to the Latin West, and include perspectives from
-            apologists, theologians, bishops, and monastic leaders. Despite
-            their differing backgrounds and theological emphases, they
-            unanimously uphold the tradition of head coverings as a vital
-            expression of modesty, humility, and adherence to apostolic
-            teaching.</p>
-        </div>
+        <p><b>Artwork</b></p>
+        <p>Artistic evidence shows women wearing head coverings during worship.
+          In the 1st century, frescoes in the Roman catacombs of Priscilla and
+          Domitilla depict veiled women praying. By the 3rd century, mosaics in
+          Dura-Europos, Syria, show veiled women in worship. In the 4th century,
+          Christian sarcophagi in Rome, like the Sarcophagus of the Good
+          Shepherd, feature veiled women in biblical scenes, while frescoes in
+          Ephesus and Cappadocia catacombs depict veiled figures, including
+          Mary, in worship.<sup><span class="ref">REF<span class="ref-box"> <strong>3rd
+                  Century</strong><br>
+                Dura-Europos Mosaics (Syria): Mosaics portray veiled women in
+                worship scenes, including the Procession of the Holy Women in
+                the Christian house church.<br>
+                <br>
+                <strong>4th Century</strong><br>
+                Christian Sarcophagi (Rome, Italy): Sarcophagi, such as the
+                Sarcophagus of the Good Shepherd, feature veiled women in
+                biblical narratives.<br>
+                Ephesus Frescoes (Asia Minor): Frescoes show veiled women in
+                worship.<br>
+                Cappadocia Catacombs (Asia Minor): Depictions of veiled biblical
+                figures, including Mary.<br>
+                Basilica of St. John (Ephesus, Asia Minor): Mosaics depict
+                veiled women in worship.<br>
+                <br>
+                <strong>5th Century</strong><br>
+                Cappella di Sant’Andrea (Archiepiscopal Museum, Ravenna, Italy)
+                (495 AD): Mosaics of six female martyrs, including Cecilia and
+                Felicitas, wearing veils.<br>
+                <br>
+                <strong>6th Century</strong><br>
+                Basilica of San Vitale (Ravenna, Italy) (547 AD): Mosaics of
+                Empress Theodora and her retinue, including veiled women, in a
+                Eucharistic procession.<br>
+                Basilica of Sant’Apollinare Nuovo (Ravenna, Italy) (556–569 AD):
+                The Procession of Virgins mosaic depicts veiled women in a
+                liturgical procession.<br>
+                Rabbula Gospels (6th century): Depict veiled women such as Mary
+                Magdalene and the Virgin Mary in biblical scenes.<br>
+              </span></span></sup></p>
+        <p><b>Physical description of head covering</b></p>
+        <p>According to early Christian historian David Bercot, the historical
+          records indicate that the early churches universally understood Paul
+          to be referring to a cloth veil, not long hair.<sup><span class="ref">REF<span
+
+                class="ref-box"> Bercot, David W. (1992). Common Sense: A New
+                Approach to Understanding Scripture. Scroll Publishing Co. p.
+                68. ISBN 978-0-924722-06-6. </span></span></sup></p>
+        <h1 id="ecf">Early Christian Leaders on Head Coverings</h1>
       </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <cite></cite>
+        <p style="text-align: justify;">There is a clear consensus among early
+          Christian writers that head coverings are to be observed. The
+          literature affirming this practice spans a wide geographical area,
+          diverse theological perspectives, and an extensive time period, from
+          the 1st to the 5th century.</p>
+        <p style="text-align: center;">Here are some of the earliest and
+          respected theologians' quotations on the matter:</p>
+        <div style="text-align: justify;">
+          <!-- Clement of Alexandria -->
+          <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <img src="https://m.media-amazon.com/images/I/81u+O1ml4DL._AC_UF894,1000_QL80_.jpg"
+
+              alt="Clement of Alexandria" style="width: 100px; height: 100px; margin-right: 20px; border-radius: 8px;">
+            <div>
+              <p>Clement of Alexandria (c. 150–215 AD) was a Christian
+                apologist, presbyter, and theologian who served as the second
+                leader of the Catechetical School of Alexandria. In his work <em>The
+                  Instructor (Paedagogus)</em>, written around 198 AD, he wrote:</p>
+              <div class="quote-container" style="--ds-md-zoom: 1.143;">
+                <blockquote class="quote-design">
+                  <p>"Woman and man are to go to church ... Let the woman
+                    observe this, further. Let her be entirely covered, unless
+                    she happen to be at home. ... And she will never fall, who
+                    puts before her eyes modesty, and her shawl ... For this is
+                    the wish of the Word, since it is becoming for her to pray
+                    veiled."</p>
+                  <footer class="quote-footer"> <a href="https://www.logoslibrary.org/clement/instructor/311.html">—
+                      The Instructor, Book III, Chapter 11.</a> </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <!-- Tertullian -->
+          <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Tertullian2.png"
+
+              alt="Tertullian" style="width: 100px; height: 100px; margin-right: 20px; border-radius: 8px;">
+            <div>
+              <p>Tertullian (c. 160–240 AD), an early Christian author from
+                Carthage, was the first to produce extensive Latin Christian
+                literature. A prominent apologist and polemicist, he addressed
+                head coverings for women in his work <em>On the Veiling of
+                  Virgins</em> (c. 200 AD):</p>
+              <div class="quote-container" style="--ds-md-zoom: 1.143;">
+                <blockquote class="quote-design">
+                  <p>"Is the reason she is allowed to go without a veil so that
+                    she can stand out and be noticed as she enters the church?
+                    Is it so she can show off her holiness by leaving her head
+                    uncovered? If she deserves recognition, wouldn’t it be
+                    better to honor her with some kind of leadership role or
+                    responsibility, rather than letting her disregard the
+                    practice of covering her head?"</p>
+                  <footer class="quote-footer"> <a href="https://www.newadvent.org/fathers/0403.htm">—
+                      Tertullian, On the Veiling of Virgins, Chapter 9</a> </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <!-- Hippolytus of Rome -->
+          <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijdj5jWjhBkrZzyGCbQvtlW2gz3T9GcrTdUm7y4h-QXshBzR7ZSiCZ8ht3Fv67TrPXQBRJ8HWOJOwHNaHV8AXEzqIFDWAVuDbvwYt2SAcLt09OsMo_OinaQao-gXFQDUbad26k-6YlRQ/s1600/hippolytus.jpg"
+
+              alt="Hippolytus of Rome" style="width: 100px; height: 100px; margin-right: 20px; border-radius: 8px;">
+            <div>
+              <p>Hippolytus of Rome (c. 170–235), a prominent bishop and
+                theologian, documented early Christian practices in his work <em>Apostolic
+                  Tradition</em> (c. 215). He wrote:</p>
+              <div class="quote-container" style="--ds-md-zoom: 1.143;">
+                <blockquote class="quote-design">
+                  <p>"All women should cover their heads with a proper veil, not
+                    just a piece of thin linen, as that doesn’t count as a true
+                    covering."</p>
+                  <footer class="quote-footer"> <a href="https://www.stjohnsarlingtonva.org/Customer-Content/saintjohnsarlington/CMS/files/EFM/Apostolic_Tradition_by_Hippolytus.pdf">—
+                      Hippolytus, Apostolic Tradition, Chapter 18 (verse 5)</a>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+        <b>List of affirming figureheads</b></div>
+      <ul>
+        <li>Clement of Alexandria - <a href="https://www.newadvent.org/fathers/02091.htm">The
+            Instructor</a> (191–202 AD, Alexandria)</li>
+        <li>Tertullian - <a href="https://www.tertullian.org/works/de_cultu_feminarum.htm">De
+            Cultu Feminarum</a> / <a href="https://www.newadvent.org/fathers/0403.htm">On
+            the Veiling of Virgins</a> (c. 200 AD, Carthage)</li>
+        <li>Hippolytus of Rome - <a href="https://www.stjohnsarlingtonva.org/Customer-Content/saintjohnsarlington/CMS/files/EFM/Apostolic_Tradition_by_Hippolytus.pdf">Apostolic
+            Tradition</a> (c. 215 AD, Rome)</li>
+        <li>Origen - <a id="https://archive.org/details/complete-works-of-origen"
+
+            href="https://archive.org/details/complete-works-of-origen">Commentary
+            on 1 Corinthians</a> (248–254 AD, Caesarea)</li>
+        <li>Didascalia Apostolorum - <a href="https://agape-biblia.org/literatura/Didascalia-Apostolorum.pdf">Didascalia
+            Apostolorum</a> (230–250 AD, Syria)</li>
+        <li>Basil of Caesarea - <a href="https://www.newadvent.org/fathers/3202207.htm">Letter
+            207</a> (c. 370 AD, Caesarea)</li>
+        <li>John Chrysostom - <a href="https://www.documentacatholicaomnia.eu/03d/0345-0407,_Iohannes_Chrysostomus,_Homilies_on_First_Corinthians,_EN.pdf">Homilies
+            on 1 Corinthians</a> (390–400 AD, Antioch)</li>
+        <li>Jerome - <a href="https://www.newadvent.org/fathers/3001022.htm">Letter
+            22</a> (c. 385 AD, Bethlehem)</li>
+        <li>Augustine - <a href="https://www.newadvent.org/fathers/1102245.htm">Letter
+            245 </a>(c. 400–420 AD, Hippo)</li>
+        <li>Theodoret of Cyrus - <a href="https://repositorio.sandamaso.es/bitstream/123456789/3292/1/04-hill.theodoret.79.99.pdf">Interpretation
+            of St. Paul's Letters</a> (c. 450 AD, Cyrus)</li>
+      </ul>
+      <h1 id="conclusion">Conclusion</h1>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <p>The practice of head coverings was widely supported in early
+          Christian writings, showing a strong consensus across different
+          regions and cultures. From the 1st to the 5th century, Christian
+          leaders from places like Alexandria, Carthage, Rome, Caesarea,
+          Antioch, and Hippo spoke of its importance.</p>
+        <p>These writers came from diverse backgrounds, ranging from the
+          Greek-speaking East to the Latin West, and included theologians,
+          bishops, and monastic leaders. Despite their differences, they all
+          agreed that head coverings were a way to show modesty, humility, and
+          respect for apostolic teachings.</p>
+        <p style="text-align: center;"><strong>Key Bible Passages on the
+            Timelessness and Accuracy of Scripture</strong></p>
+        <p style="text-align: center;"></p>
+        <strong></strong>
+        <blockquote> <em>"All Scripture is God-breathed, and is profitable for
+            teaching, for conviction, for correction, for instruction that is in
+            righteousness, that the man of God may be complete—fully equipped
+            for every good work."</em><br>
+          <b> - 2 Timothy 3:16-17 (LSV)
+          </b></blockquote>
+        <blockquote> <em>"For truly I say to you, until the heaven and the
+            earth pass away, one iota or one tittle may not pass away from the
+            Law, until all may come to pass."</em><br>
+          <b> - Matthew 5:18 (LSV)
+          </b></blockquote>
+        <blockquote> <em>"Every word of God is refined; He is a shield to those
+            trusting in Him. Do not add to His words, lest He reason with you,
+            and you have been found false."</em><br>
+          <strong>- Proverbs 30:5-6 (LSV)</strong>
+        </blockquote>
+      </div>
+      <p></p>
+      <p></p>
     </div>
   </body>
 </html>
