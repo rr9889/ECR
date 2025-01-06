@@ -1,0 +1,32 @@
+{
+  "writings": [
+    {
+      "title": "The New Testament",
+      "image": "https://via.placeholder.com/100",
+      "author": "Various authors, 1st century",
+      "description": "The foundational texts of Christianity, including the Gospels, Acts, Epistles, and Revelation.",
+      "category": "Scripture"
+    },
+    {
+      "title": "The Didache",
+      "image": "https://via.placeholder.com/100",
+      "author": "Anonymous, late 1st–early 2nd century",
+      "description": "A manual of Christian ethics, worship, and church order, often referred to as 'The Teaching of the Twelve Apostles.'",
+      "category": "Church Manual"
+    },
+    {
+      "title": "The Epistle of Barnabas",
+      "image": "https://via.placeholder.com/100",
+      "author": "Anonymous, early 2nd century",
+      "description": "A theological treatise emphasizing the fulfillment of Old Testament prophecies in Christ.",
+      "category": "Theology"
+    },
+    {
+      "title": "Pliny the Younger (Epistles 10.96)",
+      "image": "https://via.placeholder.com/100",
+      "author": "Pliny the Younger, c. 112 AD",
+      "description": "A Roman governor’s letter describing early Christian worship practices, including hymn-singing and communal meals.",
+      "category": "Historical Account"
+    }
+  ]
+}
