@@ -147,7 +147,7 @@
   <body>
     <div class="container">
       <h1>Early Christian Repository</h1>
-      <p>Articles</p>
+      
       <p class="centeretext" id="random-bible-passage"></p>
       <ul class="article-list">
         <li> <a href="celebrations.html">
@@ -195,20 +195,8 @@
       "Isaiah 40:31",
       "Matthew 11:28"
     ];
-  
-    // Select a random reference
-    const randomReference = randomReferences[Math.floor(Math.random() * randomReferences.length)];
-  
-    // Fetch the verse
-    fetch(`${apiUrl}${randomReference}`)
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("random-bible-passage").textContent = `${data.reference} - ${data.text}`;
-      })
-      .catch(error => {
-        console.error("Error fetching the Bible verse:", error);
-        document.getElementById("random-bible-passage").textContent = "Error fetching Bible verse.";
-      });
+ 
+    
   </script>
   </body>
 </html>
