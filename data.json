@@ -1,36 +1,68 @@
 {
-    "writings": [
-      {
-        "title": "Gospel of Matthew",
-        "author": "Matthew",
-        "description": "One of the four canonical gospels, focusing on Jesus' teachings.",
-        "image": "./images/matthew.jpg",
-        "category": "Scripture",
-        "date": "early-2nd-century"
-      },
-      {
-        "title": "Didache",
-        "author": "Unknown",
-        "description": "An early Christian treatise on ethics and church practices.",
-        "image": "./images/didache.jpg",
-        "category": "Church Manual",
-        "date": "late-1st-early-2nd-century"
-      },
-      {
-        "title": "Epistle of Barnabas",
-        "author": "Barnabas",
-        "description": "A theological letter discussing the relationship between the Old and New Covenants.",
-        "image": "./images/barnabas.jpg",
-        "category": "Theology",
-        "date": "late-1st-early-2nd-century"
-      },
-      {
-        "title": "Shepherd of Hermas",
-        "author": "Hermas",
-        "description": "An apocalyptic work with visions and parables.",
-        "image": "./images/hermas.jpg",
-        "category": "Apocalyptic",
-        "date": "early-2nd-century"
-      }
-    ]
-  }
+  "writings": [
+    {
+      "title": "Gospel of Matthew",
+      "author": "Matthew",
+      "description": "One of the four canonical gospels, focusing on Jesus' teachings.",
+      "image": "./images/matthew.jpg",
+      "category": "Scripture",
+      "date": "1st-century"
+    },
+    {
+      "title": "Didache",
+      "author": "Unknown",
+      "description": "An early Christian treatise on ethics and church practices.",
+      "image": "./images/didache.jpg",
+      "category": "Church Manual",
+      "date": "late-1st-early-2nd-century"
+    },
+    {
+      "title": "Epistle of Barnabas",
+      "author": "Barnabas",
+      "description": "A theological letter discussing the relationship between the Old and New Covenants.",
+      "image": "./images/barnabas.jpg",
+      "category": "Theology",
+      "date": "late-1st-early-2nd-century"
+    },
+    {
+      "title": "Shepherd of Hermas",
+      "author": "Hermas",
+      "description": "An apocalyptic work with visions and parables.",
+      "image": "./images/hermas.jpg",
+      "category": "Apocalyptic",
+      "date": "early-2nd-century"
+    },
+    {
+      "title": "First Epistle of Clement",
+      "author": "Clement of Rome",
+      "description": "A letter addressing divisions in the Corinthian church.",
+      "image": "./images/clement.jpg",
+      "category": "Epistle",
+      "date": "late-1st-early-2nd-century"
+    },
+    {
+      "title": "Gospel of Thomas",
+      "author": "Unknown",
+      "description": "A non-canonical gospel containing sayings attributed to Jesus.",
+      "image": "./images/thomas.jpg",
+      "category": "Gnostic",
+      "date": "1st-century"
+    },
+    {
+      "title": "Epistle to Diognetus",
+      "author": "Unknown",
+      "description": "An apologetic work defending Christianity to a pagan audience.",
+      "image": "./images/diognetus.jpg",
+      "category": "Apologetics",
+      "date": "early-2nd-century"
+    },
+    {
+      "title": "Martyrdom of Polycarp",
+      "author": "Unknown",
+      "description": "An account of the martyrdom of Polycarp, bishop of Smyrna.",
+      "image": "./images/polycarp.jpg",
+      "category": "Martyrdom Account",
+      "date": "mid-2nd-century"
+    }
+  ]
+}
