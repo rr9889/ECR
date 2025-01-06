@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Christian Writings</title>
+    <link rel="stylesheet" href="./css/fstyles.css">
+    <style>
+      /* Your existing CSS styles */
+    </style>
+  </head>
+  <body>
+    <div id="announcement-banner" class="banner-container">
+      <div class="banner-text"> <a href="index.html" class="banner-link">BACK TO MAIN SITE</a> </div>
+    </div>
+    <nav class="toc">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#1st-century">1st Century</a></li>
+        <li><a href="#late-1st-early-2nd-century">Late 1st–Early 2nd Century</a></li>
+        <li><a href="#early-2nd-century">Early 2nd Century</a></li>
+        <li><a href="#mid-2nd-century">Mid-2nd Century</a></li>
+        <li><a href="#late-2nd-century">Late 2nd Century</a></li>
+        <li><a href="#late-2nd-early-3rd-century">Late 2nd–Early 3rd Century</a></li>
+        <li><a href="#early-3rd-century">Early 3rd Century</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="centre_me">Early Christian Writings (Pre-325 AD)</h1>
+      <!-- 1st Century -->
+      <h1 id="1st-century">1st Century</h1>
+      <div class="card-container" id="1st-century-cards"></div>
+      <!-- Late 1st–Early 2nd Century -->
+      <h1 id="late-1st-early-2nd-century">Late 1st–Early 2nd Century</h1>
+      <div class="card-container" id="late-1st-early-2nd-century-cards"></div>
+      <!-- Early 2nd Century -->
+      <h1 id="early-2nd-century">Early 2nd Century</h1>
+      <div class="card-container" id="early-2nd-century-cards"></div>
+      <!-- Conclusion -->
+      <h1 id="conclusion">Conclusion</h1>
+      <p>This list provides a comprehensive overview of early Christian writings, showcasing the rich theological and liturgical traditions of the Church Fathers before 325 AD.</p>
+    </div>
+    <script>
+      // Function to toggle card expansion
+      function toggleCard(card) {
+        card.classList.toggle("collapsed");
+      }
+
+      // Function to fetch JSON data and generate cards
+      async function fetchDataAndGenerateCards() {
+        try {
+          const response = await fetch('./data.json');
+          const data = await response.json();
+
+          // Generate cards for each writing
+          data.writings.forEach(writing => {
+            const card = document.createElement('div');
+            card.className = 'card collapsed';
+            card.onclick = () => toggleCard(card);
+
+            const cardContent = `
+              <h3>${writing.title}</h3>
+              <div class="card-content">
+                <img src="${writing.image}" alt="${writing.title}">
+                <p><em>${writing.author}</em></p>
+                <p>${writing.description}</p>
+                <p class="card-category">Category: ${writing.category}</p>
+              </div>
+            `;
+
+            card.innerHTML = cardContent;
+
+            // Append the card to the appropriate container based on the category or time period
+            if (writing.category === "Scripture") {
+              document.getElementById('1st-century-cards').appendChild(card);
+            } else if (writing.category === "Church Manual" || writing.category === "Theology") {
+              document.getElementById('late-1st-early-2nd-century-cards').appendChild(card);
+            } else if (writing.category === "Historical Account") {
+              document.getElementById('early-2nd-century-cards').appendChild(card);
+            }
+          });
+        } catch (error) {
+          console.error('Error fetching or generating cards:', error);
+        }
+      }
+
+      // Call the function to fetch data and generate cards
+      fetchDataAndGenerateCards();
+    </script>
+  </body>
+</html>
