@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Christian Writings</title>
+  <link rel="stylesheet" href="./css/fstyles.css">
+  <style>
+    /* Card Styles */
+    .card {
+        background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 100%; /* Ensure cards don't exceed container width */
+  width: 95%; /* Adjust this value to control card width */
+    }
+
+    .card.collapsed {
+      padding: 10px 20px;
+    }
+
+    .card.collapsed .card-content {
+      display: none;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .card p {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .card em {
+      font-style: italic;
+      color: #777;
+    }
+
+    .card-category {
+      font-weight: bold;
+      color: #3498db;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    /* Flexbox Layout for Cards */
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Space between cards */
+    }
+  </style>
+</head>
+<body>
+  <div id="announcement-banner" class="banner-container">
+    <div class="banner-text">
+      <a href="index.html" class="banner-link">BACK TO MAIN SITE</a>
+    </div>
+  </div>
+  <nav class="toc">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#1st-century">1st Century</a></li>
+      <li><a href="#late-1st-early-2nd-century">Late 1st–Early 2nd Century</a></li>
+      <li><a href="#early-2nd-century">Early 2nd Century</a></li>
+      <li><a href="#mid-2nd-century">Mid-2nd Century</a></li>
+      <li><a href="#late-2nd-century">Late 2nd Century</a></li>
+      <li><a href="#late-2nd-early-3rd-century">Late 2nd–Early 3rd Century</a></li>
+      <li><a href="#early-3rd-century">Early 3rd Century</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1 class="centre_me">Early Christian Writings (Pre-325 AD)</h1>
+
+    <!-- 1st Century -->
+    <h1 id="1st-century">1st Century</h1>
+    <div class="card-container">
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>The New Testament</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="New Testament">
+          <p><em>Various authors, 1st century</em></p>
+          <p>The foundational texts of Christianity, including the Gospels, Acts, Epistles, and Revelation.</p>
+          <p class="card-category">Category: Scripture</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Late 1st–Early 2nd Century -->
+    <h1 id="late-1st-early-2nd-century">Late 1st–Early 2nd Century</h1>
+    <div class="card-container">
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>The Didache</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="Didache">
+          <p><em>Anonymous, late 1st–early 2nd century</em></p>
+          <p>A manual of Christian ethics, worship, and church order, often referred to as "The Teaching of the Twelve Apostles."</p>
+          <p class="card-category">Category: Church Manual</p>
+        </div>
+      </div>
+
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>The Epistle of Barnabas</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="Epistle of Barnabas">
+          <p><em>Anonymous, early 2nd century</em></p>
+          <p>A theological treatise emphasizing the fulfillment of Old Testament prophecies in Christ.</p>
+          <p class="card-category">Category: Theology</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Early 2nd Century -->
+    <h1 id="early-2nd-century">Early 2nd Century</h1>
+    <div class="card-container">
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>Pliny the Younger (Epistles 10.96)</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="Pliny the Younger">
+          <p><em>Pliny the Younger, c. 112 AD</em></p>
+          <p>A Roman governor’s letter describing early Christian worship practices, including hymn-singing and communal meals.</p>
+          <p class="card-category">Category: Historical Account</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <h1 id="conclusion">Conclusion</h1>
+    <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+      <p>This list provides a comprehensive overview of early Christian writings, showcasing the rich theological and liturgical traditions of the Church Fathers before 325 AD.</p>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle card expansion
+    function toggleCard(card) {
+      card.classList.toggle("collapsed");
+    }
+  </script>
+</body>
+</html>
