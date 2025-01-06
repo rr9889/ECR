@@ -5,186 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Early Christian Repository</title>
     <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.8;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.8;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
 
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #2c3e50;
-      text-align: center;
-    }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+      }
 
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
 
-    ul.article-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
+      ul.article-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
 
-    ul.article-list li {
-      margin-bottom: 10px;
-    }
+      ul.article-list li {
+        margin-bottom: 10px;
+      }
 
-    ul.article-list a {
-      text-decoration: none;
-      color: #3498db;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+      ul.article-list a {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
 
-    ul.article-list a:hover {
-      color: #2c3e50;
-    }
+      ul.article-list a:hover {
+        color: #2c3e50;
+      }
 
-    .nav-bar {
-      text-align: center;
-      margin: 20px 0;
-    }
+      .nav-bar {
+        text-align: center;
+        margin: 20px 0;
+      }
 
-    .nav-bar a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      margin: 0 15px;
-      padding: 10px 20px;
-      background-color: #3498db;
-      border: none;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.2s;
-    }
+      .nav-bar a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        margin: 0 15px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
 
-    .nav-bar a:hover {
-      background-color: #217dbb;
-      transform: scale(1.05);
-    }
-    .centeretext {
-  text-align: center; /* Centers the text */
-  margin: 10px 0; /* Optional: Adds some vertical spacing */
-}
-.article-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
+      .nav-bar a:hover {
+        background-color: #217dbb;
+        transform: scale(1.05);
+      }
 
-.article-list li {
-  margin-bottom: 15px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+      .centeretext {
+        text-align: center; /* Centers the text */
+        margin: 10px 0; /* Optional: Adds some vertical spacing */
+      }
 
-.article-list li:hover {
-  transform: scale(1.02); /* Slight zoom effect on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
+      .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
 
-.article-list a {
-  text-decoration: none;
-  color: inherit; /* Inherits text color from parent */
-}
+      .article-list li {
+        margin-bottom: 15px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
 
-.article-item {
-  background-color: #ffffff; /* White card background */
-  border: 1px solid #e0e0e0; /* Light gray border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
+      .article-list li:hover {
+        transform: scale(1.02); /* Slight zoom effect on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+      }
 
-.article-item h2 {
-  font-size: 1.25rem; /* Title size */
-  color: #2c3e50; /* Dark blue text for titles */
-  margin: 0;
-}
+      .article-list a {
+        text-decoration: none;
+        color: inherit; /* Inherits text color from parent */
+      }
 
-.article-item .metadata {
-  font-size: 0.9rem; /* Smaller font for metadata */
-  color: #7f8c8d; /* Gray color for metadata */
-  margin: 0;
-}
+      .article-item {
+        background-color: #ffffff; /* White card background */
+        border: 1px solid #e0e0e0; /* Light gray border */
+        border-radius: 8px; /* Rounded corners */
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
 
-.article-list li:hover h2 {
-  color: #3498db; /* Changes title color on hover */
-}
+      .article-item h2 {
+        font-size: 1.25rem; /* Title size */
+        color: #2c3e50; /* Dark blue text for titles */
+        margin: 0;
+      }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .article-item {
-    padding: 10px;
-  }
+      .article-item .metadata {
+        font-size: 0.9rem; /* Smaller font for metadata */
+        color: #7f8c8d; /* Gray color for metadata */
+        margin: 0;
+      }
 
-  .article-item h2 {
-    font-size: 1rem;
-  }
+      .article-list li:hover h2 {
+        color: #3498db; /* Changes title color on hover */
+      }
 
-  .article-item .metadata {
-    font-size: 0.8rem;
-  }
-}
-  </style>
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .article-item {
+          padding: 10px;
+        }
+
+        .article-item h2 {
+          font-size: 1rem;
+        }
+
+        .article-item .metadata {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Early Christian Repository</h1>
       
-      <p class="centeretext" id="random-bible-passage"></p>
+      <!-- Bible Passage Display -->
+      <p class="centeretext" id="random-bible-passage">Loading Bible passage...</p>
+      
       <ul class="article-list">
-        <li> <a href="celebrations.html">
+        <li>
+          <a href="celebrations.html">
             <div class="article-item">
               <h2>Early Christian Celebrations</h2>
               <p class="metadata">By Ryan Reeves | January 2, 2025</p>
             </div>
-          </a> </li>
-        <li> <a href="head_coverings.html">
+          </a>
+        </li>
+        <li>
+          <a href="head_coverings.html">
             <div class="article-item">
               <h2>Head Coverings in Early Christianity</h2>
               <p class="metadata">By Ryan Reeves | January 3, 2025</p>
             </div>
-          </a> </li>
-        <li> <a href="sause.html">
+          </a>
+        </li>
+        <li>
+          <a href="sause.html">
             <div class="article-item">
               <h2>Sources of Early Christianity Pre-325 AD</h2>
               <p class="metadata">Ryan Reeves | January 5, 2025</p>
             </div>
-          </a> </li>
-        <li> <a href="article4.html">
+          </a>
+        </li>
+        <li>
+          <a href="article4.html">
             <div class="article-item">
               <h2>Article Title Placeholder</h2>
               <p class="metadata">By Author Name | Date</p>
             </div>
-          </a> </li>
-        <li> <a href="article5.html">
+          </a>
+        </li>
+        <li>
+          <a href="article5.html">
             <div class="article-item">
               <h2>Article Title Placeholder</h2>
               <p class="metadata">By Author Name | Date</p>
             </div>
-          </a> </li>
+          </a>
+        </li>
       </ul>
-      <div class="nav-bar"> <a href="final.html">Explore More</a> </div>
+      <div class="nav-bar">
+        <a href="final.html">Explore More</a>
+      </div>
     </div>
-    <script>
 
-  </script>
+    <!-- Bible Quotes Functionality -->
+    <script>
+      // Function to fetch a random Bible passage
+      async function fetchRandomBiblePassage() {
+        try {
+          // Fetch a random Bible verse from an API
+          const response = await fetch('https://labs.bible.org/api/?passage=random&type=json');
+          const data = await response.json();
+
+          // Extract the verse details
+          const verse = data[0];
+          const passage = `${verse.bookname} ${verse.chapter}:${verse.verse} - ${verse.text}`;
+
+          // Display the passage in the #random-bible-passage element
+          document.getElementById('random-bible-passage').textContent = passage;
+        } catch (error) {
+          console.error('Error fetching Bible passage:', error);
+          document.getElementById('random-bible-passage').textContent = 'Failed to load Bible passage.';
+        }
+      }
+
+      // Fetch and display a random Bible passage when the page loads
+      fetchRandomBiblePassage();
+    </script>
   </body>
 </html>
