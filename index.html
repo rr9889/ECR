@@ -108,7 +108,7 @@
         background-color: #ffffff; /* White card background */
         border: 1px solid #e0e0e0; /* Light gray border */
         border-radius: 8px; /* Rounded corners */
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -146,60 +146,70 @@
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <h1>Early Christian Repository</h1>
-      
-      <!-- Bible Passage Display -->
-      <p class="centeretext" id="random-bible-passage">Loading Bible passage...</p>
-      
-      <ul class="article-list">
-        <li>
-          <a href="celebrations.html">
-            <div class="article-item">
-              <h2>Early Christian Celebrations</h2>
-              <p class="metadata">By Ryan Reeves | January 2, 2025</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="head_coverings.html">
-            <div class="article-item">
-              <h2>Head Coverings in Early Christianity</h2>
-              <p class="metadata">By Ryan Reeves | January 3, 2025</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="sause.html">
-            <div class="article-item">
-              <h2>Early Christian Writings (Pre-325 AD)</h2>
-              <p class="metadata">Ryan Reeves | January 5, 2025</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="article4.html">
-            <div class="article-item">
-              <h2>Article Title Placeholder</h2>
-              <p class="metadata">By Author Name | Date</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="article5.html">
-            <div class="article-item">
-              <h2>Article Title Placeholder</h2>
-              <p class="metadata">By Author Name | Date</p>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <div class="nav-bar">
-        <a href="final.html">Explore More</a>
-      </div>
+<body>
+  <div class="container">
+    <h1>Early Christian Repository</h1>
+    
+    <!-- Bible Passage Display -->
+    <p class="centeretext" id="random-bible-passage">Loading Bible passage...</p>
+
+    <!-- Fact Articles -->
+    <b>Fact Articles</b>
+    <ul class="article-list">
+      <li>
+        <a href="celebrations.html">
+          <div class="article-item">
+            <h2>Celebrations</h2>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="head_coverings.html">
+          <div class="article-item">
+            <h2>Head Coverings</h2>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="sause.html">
+          <div class="article-item">
+            <h2>Early Christian Writings</h2>
+          </div>
+        </a>
+      </li>
+    </ul> <!-- Close the <ul> for Fact Articles -->
+
+    <!-- Explore More Button -->
+    <div class="nav-bar">
+      <a href="final.html">Explore More</a>
     </div>
 
+    <!-- Opinion Articles -->
+    <b>Opinion Articles</b>
+    <ul class="article-list">
+      <li>
+        <a href="article4.html">
+          <div class="article-item">
+            <h2>Article Title Placeholder</h2>
+            <p class="metadata">By Author Name | Date</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="article5.html">
+          <div class="article-item">
+            <h2>Article Title Placeholder</h2>
+            <p class="metadata">By Author Name | Date</p>
+          </div>
+        </a>
+      </li>
+    </ul> <!-- Close the <ul> for Opinion Articles -->
+
+    <!-- Explore More Button -->
+    <div class="nav-bar">
+      <a href="final.html">Explore More</a>
+    </div>
+  </div>
     <!-- Bible Quotes Functionality -->
     <script>
       // Function to fetch a random Bible passage
@@ -224,5 +234,6 @@
       // Fetch and display a random Bible passage when the page loads
       fetchRandomBiblePassage();
     </script>
+    
   </body>
 </html>
