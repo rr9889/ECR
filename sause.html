@@ -6,49 +6,95 @@
     <title>Early Christian Writings</title>
     <link rel="stylesheet" href="./css/fstyles.css">
     <style>
+      /* General Styles */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+    
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+    
+      h1, h2, h3 {
+        color: #2c3e50;
+        margin-top: 0;
+      }
+    
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+    
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+    
+      em {
+        font-style: italic;
+        color: #555;
+      }
+    
       /* Card Styles */
       .card {
         background: white;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin: 20px 0;
+        margin: 10px 0;
         padding: 20px;
         cursor: pointer;
         transition: all 0.3s ease;
-        max-width: 100%; /* Ensure cards don't exceed container width */
-        width: 95%; /* Adjust this value to control card width */
+        max-width: 100%;
+        width: 95%;
       }
-
+    
       .card.collapsed {
         padding: 10px 20px;
       }
-
+    
       .card.collapsed .card-content {
         display: none;
       }
-
+    
       .card h3 {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: #2c3e50;
       }
-
+    
       .card p {
         margin: 10px 0;
         font-size: 1rem;
         color: #555;
       }
-
+    
       .card em {
         font-style: italic;
         color: #777;
       }
-
+    
       .card-category {
         font-weight: bold;
         color: #3498db;
       }
-
+    
       .card img {
         width: 100px;
         height: 100px;
@@ -56,597 +102,358 @@
         object-fit: cover;
         margin-bottom: 10px;
       }
-
+    
       /* Flexbox Layout for Cards */
       .card-container {
         display: flex;
         flex-direction: column;
-        gap: 20px; /* Space between cards */
+        gap: 20px;
       }
-      body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.8;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2, h3 {
-      color: #2c3e50;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    em {
-      font-style: italic;
-      color: #555;
-    }
-
-    /* Navigation Styles */
-    nav {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #3498db;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Image and Caption Styles */
-    .image-container {
-      float: left;
-      margin: 0 20px 20px 0;
-      width: 300px;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .image-caption {
-    font-style: italic;
-    font-size: 0.8rem; /* Smaller font size */
-    color: #888; /* Light grey color */
-    text-align: center;
-    margin-top: 5px;
-    line-height: 1.4; /* Tighter line height for compactness */
-    }
-      .text-content {
-    flex: 1;
-}
-
-    /* Table Styles */
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 30px 0;
-      font-size: 1rem;
-    }
-
-    .info-table th, .info-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-
-    .info-table th {
-      background-color: #3498db;
-      color: white;
-      font-weight: bold;
-    }
-
-    .info-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .info-table tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
+    
+      /* Navigation Styles */
+      nav {
+        margin-top: 30px;
+        text-align: center;
       }
-
+    
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #3498db;
+        font-weight: bold;
+      }
+    
+      nav a:hover {
+        text-decoration: underline;
+      }
+    
+      /* Image and Caption Styles */
       .image-container {
-        float: none;
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 300px;
+      }
+    
+      .image-container img {
         width: 100%;
-        margin: 0 0 20px 0;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
-
-      h1 {
-        font-size: 2rem;
+    
+      .image-caption {
+        font-style: italic;
+        font-size: 0.8rem;
+        color: #888;
+        text-align: center;
+        margin-top: 5px;
+        line-height: 1.4;
       }
-
-      h2 {
-        font-size: 1.5rem;
+    
+      .text-content {
+        flex: 1;
       }
-    }
-    /* Container for the header */
-/* General Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-/* Container for the header */
-/* Centered Header Container */
-.header-container {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Vertically center the items */
-  justify-content: center; /* Horizontally center the items */
-  gap: 15px; /* Space between the image and text */
-  padding: 10px; /* Padding inside the container */
-  background-color: #fff;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 800px;
-  margin: 10px auto; /* Center the container */
-  text-align: center; /* Center text horizontally */
-}
-
-/* Centered Circular Image Styling */
-.circle-image {
-  width: 80px; /* Smaller image */
-  height: 80px; /* Smaller image */
-  border-radius: 50%; /* Make the image circular */
-  overflow: hidden; /* Ensure the image stays within the circle */
-  border: 2px solid #2c3e50; /* Thinner border */
-  display: flex; /* Use flexbox to center the image */
-  align-items: center; /* Vertically center the image */
-  justify-content: center; /* Horizontally center the image */
-}
-
-.circle-image img {
-  width: 100%; /* Ensure the image fills the circle */
-  height: 100%; /* Ensure the image fills the circle */
-  object-fit: cover; /* Maintain aspect ratio while covering the circle */
-}
-
-/* Centered Header Text Styling */
-.header-text {
-  display: flex; /* Use flexbox to align text */
-  flex-direction: column; /* Stack text vertically */
-  align-items: center; /* Center text horizontally */
-  gap: 5px; /* Space between text lines */
-}
-
-.header-text p {
-  margin: 0; /* Remove default margins */
-  font-size: 0.9rem; /* Smaller font size */
-  line-height: 1.4; /* Tighter line height */
-}
-
-.header-text p strong em {
-  font-size: 0.9rem; /* Smaller font size for emphasized text */
-  color: #555; /* Slightly lighter color */
-}
-
-.auto-style3 {
-  font-style: italic;
-  color: #555;
-  margin: 0;
-}
-
-/* News-Style Styling (Inspired by image.png) */
-.news-style {
-  font-family: 'Georgia', serif;
-  color: #444;
-  line-height: 1.6;
-}
-
-.news-style h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.news-style p {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.news-style em {
-  font-style: italic;
-  color: #666;
-}
-.centre_me {
-  text-align: center; /* Center the heading text */
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-  
-html {
-  scroll-behavior: smooth;
-}
-
-.highlight {
-  font-weight: bolder;
-  color: #111;
-  display: list-item;
-  list-style-type: disc;
-}
-
-.toc {
-  position: fixed;
-  top: 40px; /* Increase this value to move the TOC further down */
-  left: 5px; /* Keeps it close to the edge */
-  width: 140px;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
-  padding: 5px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  font-size: 0.8rem;
-}
-
-.toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.toc li {
-  margin-bottom: 5px; /* Tighter spacing for compactness */
-}
-
-.toc li a {
-  display: block;
-  text-align: left; /* Align text naturally */
-  background-color: #f5f5f5; /* Light gray for subtle button style */
-  color: #333; /* Dark text for readability */
-  text-decoration: none;
-  padding: 6px 8px; /* Reduced padding */
-  border-radius: 3px; /* Slight rounding */
-  font-weight: 500; /* Medium font weight */
-  transition: background-color 0.2s ease, transform 0.1s ease; /* Faster transitions */
-}
-
-.toc li a:hover {
-  background-color: #e0e0e0; /* Slightly darker gray on hover */
-  transform: translateY(-1px); /* Gentle lift effect */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
-}
-
-/* Responsive Design for TOC */
-@media (max-width: 768px) {
-  .toc {
-    position: static;
-    margin: 5px auto;
-    width: 100%; /* Full width for small screens */
-    box-shadow: none; /* Simplify for mobile */
-    border: none; /* Remove border for simplicity */
-  }
-
-  .toc li a {
-    font-size: 0.75rem; /* Smaller font for mobile */
-    padding: 4px 6px; /* Adjust padding for compact design */
-  }
-
-}
-/* General Banner Styling */
-.banner-container {
-  background: linear-gradient(to right, #466374, #7a9ba8); /* Gradient background */
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  text-align: center;
-
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.banner-text {
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.banner-link {
-  text-decoration: none;
-  color: #ffffff; /* Keep text white */
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .banner-container {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-}
-          blockquote {
-      margin: 20px 0;
-      padding: 15px;
-      background: #f5f5f5;
-      border-left: 5px solid #ccc;
-      font-style: italic;
-      color: #555;
-    }
-    blockquote p {
-      margin: 0;
-    }
-    .verse-ref {
-      font-weight: bold;
-      color: #007bff;
-    }
-    .explanation {
-      margin-bottom: 30px;
-    }
-    .explanation p {
-      margin: 10px 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-      font-weight: bold;
-    }
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-        .ref {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            color: blue;
-            text-decoration: underline;
+    
+      /* Table Styles */
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        font-size: 1rem;
+      }
+    
+      .info-table th, .info-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+    
+      .info-table th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+      }
+    
+      .info-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    
+      .info-table tr:hover {
+        background-color: #f1f1f1;
+      }
+    
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
         }
-        .ref .ref-box {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            padding: 8px;
-            width: 250px; /* Smaller width */
-            font-size: 12px; /* Smaller text */
-            z-index: 1;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            line-height: 1.4; /* Compact line spacing */
-                      color: black; /* Text color set to black */
+    
+        .image-container {
+          float: none;
+          width: 100%;
+          margin: 0 0 20px 0;
         }
-        .ref:hover .ref-box {
-            display: block;
+    
+        h1 {
+          font-size: 2rem;
         }
-      .sleek-box {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 20px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.sleek-box:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.sleek-box summary {
-  font-size: 1.1em;
-  font-weight: 500;
-  color: #2c3e50;
-  background-color: #3498db;
-  color: white;
-  padding: 12px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.sleek-box summary:hover {
-  background-color: #2980b9;
-}
-
-.sleek-box summary:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
-}
-
-.sleek-box .analysis-content {
-  margin-top: 16px;
-  padding: 16px;
-  border-top: 1px solid #e0e0e0;
-}
-
-.sleek-box blockquote {
-  background-color: #f0f0f0;
-  border-left: 4px solid #3498db;
-  padding: 12px;
-  margin: 12px 0;
-  border-radius: 4px;
-  font-style: italic;
-  color: #555;
-}
-
-.sleek-box h2 {
-  font-size: 1.2em;
-  color: #2c3e50;
-  margin-bottom: 8px;
-}
-
-.sleek-box p {
-  font-size: 1em;
-  color: #333;
-  line-height: 1.6;
-}
-/* Container for all author boxes */
-.author-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* Reduced gap for compactness */
-  padding: 15px;
-  justify-content: center;
-}
-
-/* Individual author box */
-.author-box {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 15px; /* Reduced padding */
-  width: calc(33.333% - 20px); /* 3 boxes per row with gap */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.author-box:hover {
-  transform: translateY(-3px); /* Subtle hover effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Author name */
-.author-box h2 {
-  font-size: 1.2em; /* Smaller font size */
-  color: #2c3e50;
-  margin-top: 0;
-  margin-bottom: 10px; /* Reduced margin */
-}
-
-/* Work, Year, Region details */
-.author-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.author-box ul li {
-  margin: 6px 0; /* Reduced margin */
-  font-size: 0.9em; /* Smaller font size */
-  color: #555;
-}
-
-.author-box ul li strong {
-  color: #333;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .author-box {
-    width: calc(50% - 15px); /* 2 boxes per row on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .author-box {
-    width: 100%; /* 1 box per row on mobile */
-  }
-}
-      /* Container for images and text */
-.image-text-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-/* Stacked images container */
-.image-stack {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Image styling */
-.image-stack img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Caption styling */
-.image-caption {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-    margin-top: 5px;
-}
-
-/* Text content styling */
-.text-content {
-    flex: 1;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .image-text-container {
+    
+        h2 {
+          font-size: 1.5rem;
+        }
+    
+        .card {
+          width: 100%;
+        }
+      }
+    
+      /* Centered Header Container */
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 10px auto;
+        text-align: center;
+      }
+    
+      .circle-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #2c3e50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .circle-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    
+      .header-text {
+        display: flex;
         flex-direction: column;
         align-items: center;
-    }
+        gap: 5px;
+      }
+    
+      .header-text p {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+    
+      .header-text p strong em {
+        font-size: 0.9rem;
+        color: #555;
+      }
+    
+      /* TOC Styles */
+      .toc {
+        position: fixed;
+        top: 40px;
+        left: 5px;
+        width: 140px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        border-radius: 4px;
+        padding: 5px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        font-size: 0.8rem;
+      }
+    
+      .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .toc li {
+        margin-bottom: 5px;
+      }
+    
+      .toc li a {
+        display: block;
+        text-align: left;
+        background-color: #f5f5f5;
+        color: #333;
+        text-decoration: none;
+        padding: 6px 8px;
+        border-radius: 3px;
+        font-weight: 500;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+      }
+    
+      .toc li a:hover {
+        background-color: #e0e0e0;
+        transform: translateY(-1px);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    
+      @media (max-width: 768px) {
+        .toc {
+          position: static;
+          margin: 5px auto;
+          width: 100%;
+          box-shadow: none;
+          border: none;
+        }
+    
+        .toc li a {
+          font-size: 0.75rem;
+          padding: 4px 6px;
+        }
+      }
+    
+      /* Sleek Box Styles */
+      .sleek-box {
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+      }
+    
+      .sleek-box:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    
+      .sleek-box summary {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: white;
+        background-color: #3498db;
+        padding: 12px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    
+      .sleek-box summary:hover {
+        background-color: #2980b9;
+      }
+    
+      .sleek-box .analysis-content {
+        margin-top: 16px;
+        padding: 16px;
+        border-top: 1px solid #e0e0e0;
+      }
+    
+      /* Author Box Styles */
+      .author-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+        justify-content: center;
+      }
+    
+      .author-box {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 15px;
+        width: calc(33.333% - 20px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+    
+      .author-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+    
+      .author-box h2 {
+        font-size: 1.2em;
+        color: #2c3e50;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    
+      .author-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .author-box ul li {
+        margin: 6px 0;
+        font-size: 0.9em;
+        color: #555;
+      }
+    
+      .author-box ul li strong {
+        color: #333;
+      }
+    
+      @media (max-width: 768px) {
+        .author-box {
+          width: calc(50% - 15px);
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .author-box {
+          width: 100%;
+        }
+      }
+      .filter-controls {
+  margin: 20px 0;
+  text-align: center;
+}
 
-    .image-stack {
-        width: 100%;
-        max-width: 300px;
-    }
+.filter-controls label {
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.filter-controls select {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
     </style>
   </head>
   <body>
+    <!-- Announcement Banner -->
     <div id="announcement-banner" class="banner-container">
-      <div class="banner-text"> <a href="index.html" class="banner-link">BACK
-          TO MAIN SITE</a> </div>
+      <div class="banner-text">
+        <a href="index.html" class="banner-link">BACK TO MAIN SITE</a>
+      </div>
     </div>
+
+      <!-- Filter Controls -->
+  <div class="filter-controls">
+    <label for="category-filter">Filter by Category:</label>
+    <select id="category-filter" onchange="filterCards()">
+      <option value="all">All Categories</option>
+      <option value="Scripture">Scripture</option>
+      <option value="Epistles">Epistles</option>
+      <option value="Theology">Theology</option>
+      <option value="Apologies">Apologies</option>
+      <option value="Martyrdom Accounts">Martyrdom Accounts</option>
+      <option value="Historical Accounts">Historical Accounts</option>
+      <option value="Polemical Works">Polemical Works</option>
+      <option value="Gospel Harmonies">Gospel Harmonies</option>
+      <option value="Dialogues">Dialogues</option>
+      <option value="Homilies">Homilies</option>
+      <option value="Sayings Collections">Sayings Collections</option>
+    </select>
+  </div>
+  
+    <!-- Table of Contents -->
     <nav class="toc">
       <ul>
         <li><a href="#introduction">Introduction</a></li>
@@ -659,76 +466,438 @@ html {
         <li><a href="#early-3rd-century">Early 3rd Century</a></li>
       </ul>
     </nav>
+  
+    <!-- Main Content Container -->
     <div class="container">
       <h1 class="centre_me">Early Christian Writings (Pre-325 AD)</h1>
+  
       <!-- 1st Century -->
       <h1 id="1st-century">1st Century</h1>
       <div class="card-container">
+        <!-- New Testament -->
         <div class="card collapsed" onclick="toggleCard(this)">
           <h3>The New Testament</h3>
-          <div class="card-content"> <img src="https://via.placeholder.com/100"
-
-              alt="New Testament">
+          <div class="card-content">
+            <img src="https://via.placeholder.com/100" alt="New Testament">
             <p><em>Various authors, 1st century</em></p>
-            <p>The foundational texts of Christianity, including the Gospels,
-              Acts, Epistles, and Revelation.</p>
-            <p class="card-category">Category: Scripture</p>
+            <p>The foundational texts of Christianity, including the Gospels, Acts, Epistles, and Revelation.</p>
+            <p class="card-category">Scripture</p>
+          </div>
+        </div>
+  
+        <!-- First Epistle of Clement -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>First Epistle of Clement</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Clement of Rome, c. 96 AD</em></p>
+            <p>A letter addressing divisions in the Corinthian church, emphasizing unity and order.</p>
+            <p class="card-category">Category: Epistles</p>
           </div>
         </div>
       </div>
+  
       <!-- Late 1st–Early 2nd Century -->
       <h1 id="late-1st-early-2nd-century">Late 1st–Early 2nd Century</h1>
       <div class="card-container">
+        <!-- The Didache -->
         <div class="card collapsed" onclick="toggleCard(this)">
           <h3>The Didache</h3>
-          <div class="card-content"> <img src="https://via.placeholder.com/100"
-
-              alt="Didache">
-            <p><em>Anonymous, late 1st–early 2nd century</em></p>
-            <p>A manual of Christian ethics, worship, and church order, often
-              referred to as "The Teaching of the Twelve Apostles."</p>
-            <p class="card-category">Category: Church Manual</p>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Anonymous, Late 1st–Early 2nd Century</em></p>
+            <p>An early Christian treatise outlining ethical teachings, rituals, and church organization.</p>
+            <p class="card-category">Category: Early Christian Writings</p>
           </div>
         </div>
+  
+        <!-- The Epistle of Barnabas -->
         <div class="card collapsed" onclick="toggleCard(this)">
           <h3>The Epistle of Barnabas</h3>
-          <div class="card-content"> <img src="https://via.placeholder.com/100"
-
-              alt="Epistle of Barnabas">
+          <div class="card-content">
+            <img src="https://via.placeholder.com/100" alt="Epistle of Barnabas">
             <p><em>Anonymous, early 2nd century</em></p>
-            <p>A theological treatise emphasizing the fulfillment of Old
-              Testament prophecies in Christ.</p>
+            <p>A theological treatise emphasizing the fulfillment of Old Testament prophecies in Christ.</p>
             <p class="card-category">Category: Theology</p>
           </div>
         </div>
-      </div>
-      <!-- Early 2nd Century -->
-      <h1 id="early-2nd-century">Early 2nd Century</h1>
-      <div class="card-container">
+  
+        <!-- Second Epistle of Clement -->
         <div class="card collapsed" onclick="toggleCard(this)">
-          <h3>Pliny the Younger (Epistles 10.96)</h3>
-          <div class="card-content"> <img src="https://via.placeholder.com/100"
-
-              alt="Pliny the Younger">
-            <p><em>Pliny the Younger, c. 112 AD</em></p>
-            <p>A Roman governor’s letter describing early Christian worship
-              practices, including hymn-singing and communal meals.</p>
-            <p class="card-category">Category: Historical Account</p>
+          <h3>Second Epistle of Clement</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Anonymous (attributed to Clement), Early 2nd Century</em></p>
+            <p>A sermon on repentance and Christian living, often considered the earliest Christian homily.</p>
+            <p class="card-category">Category: Homilies</p>
           </div>
         </div>
       </div>
-      <!-- Conclusion -->
-      <h1 id="conclusion">Conclusion</h1>
-      <p>This list provides a comprehensive overview of early Christian
-        writings, showcasing the rich theological and liturgical traditions of
-        the Church Fathers before 325 AD.</p>
-    </div>
+  
+      <!-- Early 2nd Century -->
+      <h1 id="early-2nd-century">Early 2nd Century</h1>
+      <div class="card-container">
+        <!-- Pliny the Younger -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Pliny the Younger (Epistles 10.96)</h3>
+          <div class="card-content">
+            <img src="https://via.placeholder.com/100" alt="Pliny the Younger">
+            <p><em>Pliny the Younger, c. 112 AD</em></p>
+            <p>A Roman governor’s letter describing early Christian worship practices, including hymn-singing and communal meals.</p>
+            <p class="card-category">Category: Historical Account</p>
+          </div>
+        </div>
+  
+        <!-- Expositions of the Sayings of the Lord -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Expositions of the Sayings of the Lord</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Papias of Hierapolis, c. 100–130 AD</em></p>
+            <p>A collection of Jesus' sayings and traditions, now mostly lost.</p>
+            <p class="card-category">Category: Sayings Collections</p>
+          </div>
+        </div>
+  
+        <!-- Letters of Ignatius of Antioch -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Letters of Ignatius of Antioch</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Ignatius of Antioch, c. 107–110 AD</em></p>
+            <p>Seven letters written to churches, emphasizing unity, martyrdom, and church authority.</p>
+            <p class="card-category">Category: Epistles</p>
+          </div>
+        </div>
+  
+        <!-- Epistle of Polycarp to the Philippians -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Epistle of Polycarp to the Philippians</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Polycarp, Early 2nd Century</em></p>
+            <p>A letter encouraging steadfastness in faith and addressing church issues.</p>
+            <p class="card-category">Category: Epistles</p>
+          </div>
+        </div>
+  
+        <!-- Fragments of Quadratus -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Fragments of Quadratus</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Quadratus of Athens, Early 2nd Century</em></p>
+            <p>One of the earliest Christian apologies, defending the faith.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mid-2nd Century -->
+      <h1 id="mid-2nd-century">Mid-2nd Century</h1>
+      <div class="card-container">
+        <!-- First Apology -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>First Apology</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Justin Martyr, c. 150–155 AD</em></p>
+            <p>A defense of Christianity addressed to the Roman emperor, arguing for its rationality and morality.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+  
+        <!-- Second Apology -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Second Apology</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Justin Martyr, c. 150–155 AD</em></p>
+            <p>A shorter work addressing specific accusations against Christians.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+  
+        <!-- Dialogue with Trypho -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Dialogue with Trypho</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Justin Martyr, Mid-2nd Century</em></p>
+            <p>A theological debate between Justin and a Jewish scholar, exploring Christ’s fulfillment of prophecy.</p>
+            <p class="card-category">Category: Dialogues</p>
+          </div>
+        </div>
+  
+        <!-- The Martyrdom of Polycarp -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>The Martyrdom of Polycarp</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Anonymous, Mid-2nd Century</em></p>
+            <p>An account of Polycarp’s arrest, trial, and execution, emphasizing his faith and courage.</p>
+            <p class="card-category">Category: Martyrdom Accounts</p>
+          </div>
+        </div>
+  
+        <!-- Fragments of Hegesippus -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Fragments of Hegesippus</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Hegesippus, Mid-2nd Century</em></p>
+            <p>A historical account of early Christianity, focusing on heresies and church leadership.</p>
+            <p class="card-category">Category: Historical Accounts</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Late 2nd Century -->
+      <h1 id="late-2nd-century">Late 2nd Century</h1>
+      <div class="card-container">
+        <!-- Against Heresies (Adversus Haereses) -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Against Heresies (Adversus Haereses)</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Irenaeus of Lyons, Late 2nd Century</em></p>
+            <p>A comprehensive refutation of Gnosticism, defending orthodox Christian teachings.</p>
+            <p class="card-category">Category: Polemical Works</p>
+          </div>
+        </div>
+  
+        <!-- Demonstration of the Apostolic Preaching -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Demonstration of the Apostolic Preaching</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Irenaeus of Lyons, Late 2nd Century</em></p>
+            <p>A summary of Christian doctrine, emphasizing the unity of the Old and New Testaments.</p>
+            <p class="card-category">Category: Theological Works</p>
+          </div>
+        </div>
+  
+        <!-- Fragments of Melito of Sardis -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Fragments of Melito of Sardis</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Melito of Sardis, Late 2nd Century</em></p>
+            <p>Includes works like *On Pascha*, exploring the theological significance of Easter.</p>
+            <p class="card-category">Category: Theological Works</p>
+          </div>
+        </div>
+  
+        <!-- Fragments of Tatian -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Fragments of Tatian</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Tatian, Late 2nd Century</em></p>
+            <p>Includes the *Diatessaron* (a harmony of the Gospels) and *Address to the Greeks*.</p>
+            <p class="card-category">Category: Gospel Harmonies</p>
+          </div>
+        </div>
+  
+        <!-- Fragments of Athenagoras -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Fragments of Athenagoras</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Athenagoras, Late 2nd Century</em></p>
+            <p>Includes *A Plea for the Christians* and *On the Resurrection of the Dead*.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Late 2nd–Early 3rd Century -->
+      <h1 id="late-2nd-early-3rd-century">Late 2nd–Early 3rd Century</h1>
+      <div class="card-container">
+        <!-- Apology -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Apology</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Tertullian, Late 2nd–Early 3rd Century</em></p>
+            <p>A vigorous defense of Christianity against Roman accusations.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+  
+        <!-- On Prayer -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>On Prayer</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Tertullian, Late 2nd–Early 3rd Century</em></p>
+            <p>A practical and theological guide to Christian prayer.</p>
+            <p class="card-category">Category: Theological Works</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 3rd Century -->
+      <h1 id="3rd-century">3rd Century</h1>
+
+      <div class="card-container">
+        <!-- 34. On First Principles (De Principiis) -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>On First Principles (De Principiis)</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Origen, Early 3rd Century</em></p>
+            <p>A foundational theological work exploring Christian doctrine, including God, creation, and salvation.</p>
+            <p class="card-category">Category: Theological Works</p>
+          </div>
+        </div>
+      
+        <!-- 35. Homilies -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Homilies</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Origen, Early 3rd Century</em></p>
+            <p>A series of sermons on biblical books, including Genesis, Exodus, Leviticus, Numbers, Joshua, Judges, Psalms, Luke, and John.</p>
+            <p class="card-category">Category: Homilies</p>
+          </div>
+        </div>
+      
+        <!-- 36. Against Celsus -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Against Celsus</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Origen, Early 3rd Century</em></p>
+            <p>A detailed refutation of the criticisms of Christianity by the pagan philosopher Celsus.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+      
+        <!-- 37. Commentary on John -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Commentary on John</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Origen, Early 3rd Century</em></p>
+            <p>An in-depth exegetical work on the Gospel of John, exploring its theological and spiritual themes.</p>
+            <p class="card-category">Category: Biblical Commentaries</p>
+          </div>
+        </div>
+      
+        <!-- 38. Commentary on Matthew -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Commentary on Matthew</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Origen, Early 3rd Century</em></p>
+            <p>A detailed commentary on the Gospel of Matthew, focusing on its teachings and parables.</p>
+            <p class="card-category">Category: Biblical Commentaries</p>
+          </div>
+        </div>
+      
+        <!-- 39. Apostolic Tradition -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Apostolic Tradition</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Hippolytus of Rome, Early 3rd Century</em></p>
+            <p>A manual of church order and liturgy, providing insights into early Christian worship and practices.</p>
+            <p class="card-category">Category: Liturgical Works</p>
+          </div>
+        </div>
+      
+        <!-- 40. Refutation of All Heresies -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>Refutation of All Heresies</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Hippolytus of Rome, Early 3rd Century</em></p>
+            <p>A comprehensive critique of various heresies, defending orthodox Christian teachings.</p>
+            <p class="card-category">Category: Polemical Works</p>
+          </div>
+        </div>
+      
+        <!-- 41. On Christ and Antichrist -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>On Christ and Antichrist</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Hippolytus of Rome, Early 3rd Century</em></p>
+            <p>A theological exploration of Christ’s role and the nature of the Antichrist in Christian eschatology.</p>
+            <p class="card-category">Category: Eschatology</p>
+          </div>
+        </div>
+      
+        <!-- 43. The Passion of Perpetua and Felicity -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>The Passion of Perpetua and Felicity</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Anonymous, Early 3rd Century</em></p>
+            <p>An account of the martyrdom of Perpetua and Felicity, highlighting their faith and courage.</p>
+            <p class="card-category">Category: Martyrdom Accounts</p>
+          </div>
+        </div>
+      
+        <!-- 44. The Octavius -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>The Octavius</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Minucius Felix, Early 3rd Century</em></p>
+            <p>A dialogue defending Christianity against pagan criticisms, emphasizing its rationality and morality.</p>
+            <p class="card-category">Category: Apologies</p>
+          </div>
+        </div>
+      
+        <!-- 45. The Epistle to Diognetus -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>The Epistle to Diognetus</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Anonymous, Early 3rd Century</em></p>
+            <p>A letter explaining Christian beliefs and practices to a pagan audience, emphasizing their distinctiveness.</p>
+            <p class="card-category">Category: Epistles</p>
+          </div>
+        </div>
+      
+        <!-- 46. The Odes of Solomon -->
+        <div class="card collapsed" onclick="toggleCard(this)">
+          <h3>The Odes of Solomon</h3>
+          <div class="card-content">
+            <img src="[Image URL]" alt="[Alt Text for Image]">
+            <p><em>Anonymous, Early 3rd Century</em></p>
+            <p>A collection of early Christian hymns, expressing themes of praise, salvation, and divine love.</p>
+            <p class="card-category">Category: Hymns and Poetry</p>
+          </div>
+        </div>
+      </div>
+
+  
+    <!-- Script for Toggle Functionality -->
     <script>
-      // Function to toggle card expansion
       function toggleCard(card) {
         card.classList.toggle("collapsed");
       }
+          // Function to toggle card expansion
+    function toggleCard(card) {
+      card.classList.toggle("collapsed");
+    }
+
+    // Function to filter cards by category
+    function filterCards() {
+      const filterValue = document.getElementById("category-filter").value;
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach((card) => {
+        const category = card.getAttribute("data-category");
+        if (filterValue === "all" || category === filterValue) {
+          card.style.display = "block"; // Show the card
+        } else {
+          card.style.display = "none"; // Hide the card
+        }
+      });
+    }
     </script>
-    
   </body>
-</html>
