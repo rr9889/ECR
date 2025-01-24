@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Concepts Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: center;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Network Concepts Quiz</h1>
+        <div id="quiz"></div>
+        <button class="btn" onclick="submitQuiz()">Submit</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Which topology connects all devices to a central hub or switch?",
+                options: ["Bus Topology", "Star Topology", "Mesh Topology", "Ring Topology"],
+                answer: "Star Topology"
+            },
+            {
+                question: "What is the main disadvantage of a mesh topology?",
+                options: ["Poor data redundancy", "High cost and complexity", "Centralized failure point", "Slow data transfer speeds"],
+                answer: "High cost and complexity"
+            },
+            {
+                question: "At which OSI layer does MAC addressing occur?",
+                options: ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"],
+                answer: "Data Link Layer"
+            },
+            {
+                question: "Which Ethernet component is responsible for error detection in packets?",
+                options: ["Start Frame Delimiter", "Preamble", "Cyclic Redundancy Check (CRC)", "MAC Address"],
+                answer: "Cyclic Redundancy Check (CRC)"
+            },
+            {
+                question: "What does the ping command test?",
+                options: ["The speed of the connection", "The reachability of a device on the network", "The encryption level of the data", "The maximum data size allowed in a packet"],
+                answer: "The reachability of a device on the network"
+            },
+            {
+                question: "Which of the following is a feature of a wireless network?",
+                options: ["High data transfer speeds within the LAN", "Simple installations and mobility", "Requires specialized tools for setup", "Not susceptible to security risks"],
+                answer: "Simple installations and mobility"
+            },
+            {
+                question: "What is a primary function of core switches in a LAN?",
+                options: ["Broadcasting data to all devices", "Connecting and routing traffic efficiently", "Providing a wireless access point", "Replacing routers for external connections"],
+                answer: "Connecting and routing traffic efficiently"
+            },
+            {
+                question: "What is the purpose of the OSI Presentation Layer?",
+                options: ["Managing session connections", "Formatting and encrypting data", "Ensuring data transfer integrity", "Providing application interfaces"],
+                answer: "Formatting and encrypting data"
+            },
+            {
+                question: "Which of the following is a disadvantage of a wired home network?",
+                options: ["Susceptible to interference", "Slower data transfer speeds", "Labor-intensive cable installation", "Reduced mobility"],
+                answer: "Labor-intensive cable installation"
+            },
+            {
+                question: "What does the acronym NIC stand for?",
+                options: ["Network Integration Card", "Network Interface Card", "National Interconnect Communicator", "Network Interchange Connection"],
+                answer: "Network Interface Card"
+            },
+            {
+                question: "True or False: The OSI model was developed to standardize network communication across hardware and software.",
+                options: ["True", "False"],
+                answer: "True"
+            },
+            {
+                question: "True or False: A hub broadcasts data traffic only to the intended destination device.",
+                options: ["True", "False"],
+                answer: "False"
+            },
+            {
+                question: "True or False: Wired networks are generally faster and more secure than wireless networks.",
+                options: ["True", "False"],
+                answer: "True"
+            },
+            {
+                question: "True or False: The MAC address is used to identify a device's physical hardware interface.",
+                options: ["True", "False"],
+                answer: "True"
+            },
+            {
+                question: "True or False: A cyclic redundancy check (CRC) in Ethernet packets is used for data compression.",
+                options: ["True", "False"],
+                answer: "False"
+            }
+        ];
+
+        function loadQuiz() {
+            const quizDiv = document.getElementById("quiz");
+            questions.forEach((q, index) => {
+                const questionBlock = document.createElement("div");
+                questionBlock.classList.add("question");
+                questionBlock.innerHTML = `
+                    <p>${index + 1}. ${q.question}</p>
+                    <div class="options">
+                        ${q.options.map(option => `
+                            <label>
+                                <input type="radio" name="question${index}" value="${option}"> ${option}
+                            </label>
+                        `).join("")}
+                    </div>
+                `;
+                quizDiv.appendChild(questionBlock);
+            });
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            questions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selectedOption && selectedOption.value === q.answer) {
+                    score++;
+                }
+            });
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.textContent = `You scored ${score} out of ${questions.length}.`;
+        }
+
+        loadQuiz();
+    </script>
+</body>
+</html>
