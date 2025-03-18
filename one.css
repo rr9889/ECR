@@ -83,7 +83,7 @@ td {
        .card {
         background: white;
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          : 0 4px 10px rgba(0, 0, 0, 0.1);
         margin: 10px 0;
         padding: 20px;
         cursor: pointer;
@@ -252,11 +252,11 @@ td {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 15px;
-    transition: box-shadow 0.3s;
+    transition:    0.3s;
   }
 
   .article-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      : 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .article-item h3 {
@@ -281,7 +281,6 @@ td {
     .container {
       max-width: 800px;
       margin: 50px auto;
-
       padding: 30px;
       border-radius: 10px;
 
@@ -342,7 +341,7 @@ td {
       width: 100%;
       height: auto;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        : 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .image-caption {
@@ -419,7 +418,7 @@ td {
   padding: 10px; /* Padding inside the container */
   background-color: #fff;
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
   max-width: 800px;
   margin: 10px auto; /* Center the container */
   text-align: center; /* Center text horizontally */
@@ -518,7 +517,7 @@ html {
   border: 1px solid #eaeaea;
   border-radius: 4px;
   padding: 5px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    : 0 1px 4px rgba(0, 0, 0, 0.08);
   font-size: 0.8rem;
 }
 
@@ -547,7 +546,7 @@ html {
 .toc li a:hover {
   background-color: #e0e0e0; /* Slightly darker gray on hover */
   transform: translateY(-1px); /* Gentle lift effect */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+    : 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
 }
 
 /* Responsive Design for TOC */
@@ -556,7 +555,7 @@ html {
     position: static;
     margin: 5px auto;
     width: 100%; /* Full width for small screens */
-    box-shadow: none; /* Simplify for mobile */
+      : none; /* Simplify for mobile */
     border: none; /* Remove border for simplicity */
   }
 
@@ -578,7 +577,7 @@ html {
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    : 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .banner-text {
@@ -659,7 +658,7 @@ html {
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              : 0px 8px 16px 0px rgba(0,0,0,0.2);
             line-height: 1.4; /* Compact line spacing */
                       color: black; /* Text color set to black */
         }
@@ -672,12 +671,12 @@ html {
   border-radius: 8px;
   padding: 16px;
   margin: 20px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+    : 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:    0.3s ease;
 }
 
 .sleek-box:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    : 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .sleek-box summary {
@@ -698,7 +697,7 @@ html {
 
 .sleek-box summary:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+    : 0 0 0 3px rgba(52, 152, 219, 0.5);
 }
 
 .sleek-box .analysis-content {
@@ -744,13 +743,13 @@ html {
   border-radius: 8px;
   padding: 15px; /* Reduced padding */
   width: calc(33.333% - 20px); /* 3 boxes per row with gap */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    : 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease,    0.2s ease;
 }
 
 .author-box:hover {
   transform: translateY(-3px); /* Subtle hover effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    : 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Author name */
@@ -803,7 +802,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      : 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Image styling */
@@ -811,7 +810,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      : 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Caption styling */
