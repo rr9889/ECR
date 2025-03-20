@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Early Christian Celebrations</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    ul.article-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul.article-list li {
+      margin-bottom: 10px;
+    }
+
+    ul.article-list a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    ul.article-list a:hover {
+      color: #2c3e50;
+    }
+
+    .nav-bar {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      margin: 0 15px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .nav-bar a:hover {
+      background-color: #217dbb;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Early Christian Celebrations</h1>
+    <p>
+      Discover the fascinating traditions and practices of the early Christian Church, 
+      rooted in the life and teachings of Jesus Christ. From the weekly observance of 
+      the Lord's Day to annual celebrations like Pascha, explore how early Christians 
+      celebrated their faith amidst persecution and unity.
+    </p>
+    <ul class="article-list">
+      <!-- Articles will be dynamically inserted here -->
+    </ul>
+    <div class="nav-bar">
+      <a href="final.html">Explore More</a>
+    </div>
+  </div>
+  <script>
+    // Placeholder for article data
+    const articles = [
+      { title: "Introduction to Early Christian Practices", url: "article1.html" },
+      { title: "The Significance of the Lord's Day", url: "article2.html" },
+      { title: "Annual Celebrations in Early Christianity", url: "article3.html" }
+    ];
+
+    // Reference to the article list
+    const articleList = document.querySelector(".article-list");
+
+    // Dynamically create list items
+    articles.forEach(article => {
+      const listItem = document.createElement("li");
+      const link = document.createElement("a");
+      link.textContent = article.title;
+      link.href = article.url;
+      listItem.appendChild(link);
+      articleList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>

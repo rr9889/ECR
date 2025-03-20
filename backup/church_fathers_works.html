@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive List of Church Fathers' Works (Pre-325 AD)</title>
+  <link rel="stylesheet" href="./css/fstyles.css">
+  <style>
+    /* Card Styles */
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        max-width: 100%;
+        width: 95%;
+    }
+
+    .card.collapsed {
+        padding: 10px 20px;
+    }
+
+    .card.collapsed .card-content {
+        display: none;
+    }
+
+    .card h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #2c3e50;
+    }
+
+    .card p {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .card em {
+        font-style: italic;
+        color: #777;
+    }
+
+    .card-category {
+        font-weight: bold;
+        color: #3498db;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    /* Flexbox Layout for Cards */
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Space between cards */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Comprehensive List of Church Fathers' Works (Pre-325 AD)</h1>
+
+    <!-- 1st Century -->
+    <h1 id="1st-century">1st Century</h1>
+    <div class="card-container">
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>The New Testament</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="New Testament">
+          <p><em>Various authors, 1st century</em></p>
+          <p>The foundational texts of Christianity, including the Gospels, Acts, Epistles, and Revelation.</p>
+          <p class="card-category">Category: Scripture</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Late 1st–Early 2nd Century -->
+    <h1 id="late-1st-early-2nd-century">Late 1st–Early 2nd Century</h1>
+    <div class="card-container">
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>The Didache</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="Didache">
+          <p><em>Anonymous, late 1st–early 2nd century</em></p>
+          <p>A manual of Christian ethics, worship, and church order, often referred to as "The Teaching of the Twelve Apostles."</p>
+          <p class="card-category">Category: Church Manual</p>
+        </div>
+      </div>
+
+      <div class="card collapsed" onclick="toggleCard(this)">
+        <h3>The Epistle of Barnabas</h3>
+        <div class="card-content">
+          <img src="https://via.placeholder.com/100" alt="Epistle of Barnabas">
+          <p><em>Anonymous, early 2nd century</em></p>
+          <p>A theological treatise emphasizing the fulfillment of Old Testament prophecies in Christ.</p>
+          <p class="card-category">Category: Theology</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional sections will follow the same structure -->
+  </div>
+
+  <script>
+    // Function to toggle card expansion
+    function toggleCard(card) {
+        card.classList.toggle("collapsed");
+    }
+  </script>
+</body>
+</html>

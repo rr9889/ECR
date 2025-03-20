@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infant Baptism in Early Christianity</title>
+    <link rel="stylesheet" href="oneone.css">
+  </head>
+  <body>
+    <div id="announcement-banner" class="banner-container">
+      <div class="banner-text"> <a href="index.html" class="banner-link">BACK
+          TO MAIN SITE</a> </div>
+      <div class="container">
+        <h1>Infant Baptism in Early Christianity</h1>
+        <nav> <a href="#introduction">Introduction</a> <a href="#1st-century">1st
+            Century Context</a> <a href="#emergence">Emergence of Practice</a>
+          <a href="#theology">Theological Justifications</a> <a href="#evidence">Historical
+            and Archaeological Evidence</a> <a href="#dissent">Dissenting Views</a>
+          <a href="#conclusion">Conclusion</a> </nav>
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Infant baptism has been a topic of theological debate and
+            historical study within Christianity. This article explores its
+            origins, development, and theological significance in early
+            Christian practice.</p>
+        </section>
+        <section id="1st-century">
+          <h2>1st Century Context</h2>
+          <p>There is little evidence of infant baptism in the 1st century.
+            Biblical references to household baptisms, such as in Acts 16:33,
+            are sometimes interpreted to include children, but explicit mention
+            of infants is absent. Scholars agree that infant baptism likely
+            became widespread in the 2nd or 3rd century.</p>
+          <blockquote>
+            <p><strong>Acts 2:38-39</strong>: "Repent, and be baptized each of
+              you on the Name of Jesus Christ for forgiveness of sins, and you
+              will receive the gift of the Holy Spirit, for the promise is to
+              you and to your children."</p>
+          </blockquote>
+        </section>
+        <section id="emergence">
+          <h2>Emergence of Infant Baptism</h2>
+          <p>By the 2nd century, infant baptism became more common, motivated by
+            theological concerns such as original sin and high infant mortality
+            rates. Emergency baptisms for gravely ill children reflected the
+            pastoral care of the early Christian community.</p>
+        </section>
+        <section id="theology">
+          <h2>Theological Justifications</h2>
+          <p>Church Fathers such as Origen and Cyprian defended infant baptism,
+            emphasizing its apostolic roots and its necessity for the remission
+            of original sin. They likened baptism to circumcision in the Old
+            Covenant, a sign extended to infants.</p>
+          <blockquote>
+            <p>Origen: "The Church received from the apostles the tradition of
+              giving baptism even to infants." (<em>Commentary on Romans</em>,
+              Book V, 9)</p>
+          </blockquote>
+        </section>
+        <section id="evidence">
+          <h2>Historical and Archaeological Evidence</h2>
+          <p>Evidence from catacomb inscriptions and small baptismal fonts, such
+            as those in Dura-Europos, supports the practice by the 3rd century.
+            These findings indicate the inclusion of infants in the Christian
+            community.</p>
+        </section>
+        <section id="dissent">
+          <h2>Dissenting Views</h2>
+          <p>Tertullian advised delaying baptism for infants, citing concerns
+            about post-baptismal sin and the need for personal commitment. His
+            views, however, were a minority position within the early Church.</p>
+          <blockquote>
+            <p>"Why rush to baptize them if baptism itself is not an urgent
+              necessity? Let them become Christians when they are capable of
+              knowing Christ for themselves." (<em>On Baptism</em>, Chapter 18)</p>
+          </blockquote>
+        </section>
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+          <p>While 1st-century evidence for infant baptism is scarce, the
+            practice became well-established by the 2nd and 3rd centuries.
+            Supported by theological arguments and historical evidence, it was
+            viewed as essential for the salvation and inclusion of infants in
+            the Christian community.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

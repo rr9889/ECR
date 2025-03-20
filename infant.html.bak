@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infant Baptism</title>
+    <link rel="stylesheet" href="one1.css">
+  </head>
+  <body><span style="color: #343434;"> </span>
+    <div id="announcement-banner" class="banner-container">
+      <div class="banner-text"> <span style="color: #343434;"><a href="index.html"
+            class="banner-link">BACK TO MAIN SITE</a></span> </div>
+    </div>
+    <span style="color: #343434;">
+      <!--
+    <nav class="toc">      <ul>        <li><a href="#1cen">1st Century</a></li>        <li><a href="#icon">Early Icons</a></li>        <li><a href="#ecf">Early Christian Leaders</a></li>        <li><a href="#br">Baptism</a></li>        <li><a href="#ir">Infant Requirements</a></li>        <li><a href="#con">Conclusion</a></li>      </ul>    </nav>    -->
+    </span>
+    <div class="container">
+      <h1 class="unique-title centre_me"><span style="color: #343434;">Infant
+          Baptism</span></h1>
+      <h2><span style="color: #343434;">First Century<br>
+        </span></h2>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: left;"><span
+            style="color: #343434;">A majority of scholars conclude that infant
+            baptism was not widely practiced in the 1st century due to the
+            absence of clear, explicit evidence (Ferguson, 2009; Wright, 2007;
+            Cross &amp; Livingstone, 2005; Grenz, 2000, p. 528).</span><span style="color: #343434;"></span><span
+            style="color: #343434;"> First-century Christians believed that
+            small children, especially infants, were inherently sinless, so
+            conversion was achieved by personally persuading children rather
+            than through a formal baptismal rite for infants (Keeran, 2009, p.
+            11). The Epistle of Barnabas (c. 70 AD) similarly assumes infant
+            sinlessness (Wiley, 2002, pp. 38–39). Thus, Christianity at this
+            stage, had no specific doctrine of original sin (Obach, 2008, p.
+            41). Household baptisms are described in Acts and 1 Corinthians,
+            Ferguson (2009, p. 178) contends that such descriptions are “hardly
+            applicable to small children” and that inferring infant baptism from
+            these texts is an “argument from silence.”</span></div>
+        <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: left;"><br>
+          <h2><span style="color: #343434;">Second Century</span></h2>
+          <p>Apologists such as Aristdes and Athengoras affirm small children
+            who die early are sinless indeed.</p>
+        </div>
+        <p data-start="1924" data-end="2008" data-is-last-node=""></p>
+        <p style="text-align: justify;"><span style="color: #343434;"><span class="ref"><span
+                class="ref-box">- Ferguson, E. (2009). <em>Baptism in the Early
+                  Church: History, Theology, and Liturgy in the First Five
+                  Centuries</em>. Grand Rapids: Eerdmans.<br>
+                - Wright, D. F. (2007). <em>Infant Baptism in Historical
+                  Perspective</em>. Paternoster Press.<br>
+                - Jeremias, J. (1960). <em>The Origins of Infant Baptism</em>.
+                London: SCM Press.<br>
+                - Cross, F. L., &amp; Livingstone, E. A. (Eds.). (2005). <em>The
+                  Oxford Dictionary of the Christian Church</em>. Oxford
+                University Press.</span></span></span></p>
+      </div>
+    </div>
+    <span style="color: #343434;"> </span>
+  </body>
+</html>

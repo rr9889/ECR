@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-325 AD Accepted Books</title>
+  <link rel="stylesheet" href="./css/fstyles.css">
+</head>
+<body>
+  <div id="announcement-banner" class="banner-container">
+    <div class="banner-text"> <a href="index.html" class="banner-link">BACK TO MAIN SITE</a> </div>
+  </div>
+  <nav class="toc">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#accepted-books">Accepted Books</a></li>
+      <li><a href="#theological-context">Theological Context</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1 class="centre_me">Pre-325 AD Accepted Books</h1>
+    <div class="header-container">
+      <div class="circle-image">
+        <img src="https://via.placeholder.com/150" alt="Christian Scriptures">
+      </div>
+      <div class="header-text">
+        <p><em>By Early Christian Writers</em></p>
+        <p><em>Knowledge Transfer Article (KTA)</em></p>
+      </div>
+    </div>
+    <h1 id="introduction">Introduction</h1>
+    <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+      <p>The period leading up to the Council of Nicaea in 325 AD was critical in shaping the New Testament canon. The writings of Church Fathers such as Irenaeus, Tertullian, Origen, and Eusebius, along with documents like the Muratorian Fragment, provide insight into which books were widely accepted among early Christians. This article highlights the key texts recognized during this era.</p>
+    </div>
+    <h1 id="accepted-books">Accepted Books</h1>
+    <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+      <h2>Gospels</h2>
+      <ul>
+        <li>Matthew</li>
+        <li>Mark</li>
+        <li>Luke</li>
+        <li>John</li>
+      </ul>
+      <h2>Acts of the Apostles</h2>
+      <p>This historical account of the early Church was universally accepted as authoritative.</p>
+      <h2>Pauline Epistles</h2>
+      <ul>
+        <li>Romans</li>
+        <li>1–2 Corinthians</li>
+        <li>Galatians</li>
+        <li>Ephesians</li>
+        <li>Philippians</li>
+        <li>Colossians</li>
+        <li>1–2 Thessalonians</li>
+        <li>1–2 Timothy</li>
+        <li>Titus</li>
+        <li>Philemon</li>
+      </ul>
+      <h2>General Epistles</h2>
+      <ul>
+        <li>1 Peter</li>
+        <li>1 John</li>
+      </ul>
+      <h2>Revelation</h2>
+      <p>The Book of Revelation was recognized for its apocalyptic insights, though it faced some regional disputes.</p>
+    </div>
+    <h1 id="theological-context">Theological Context</h1>
+    <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+      <p>The early Church's acceptance of these books was rooted in their apostolic origins, theological consistency, and widespread use in worship. The writings not only guided the faith and practices of early Christians but also provided a unifying framework for doctrinal development amid external challenges and internal debates.</p>
+    </div>
+    <h1 id="conclusion">Conclusion</h1>
+    <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+      <p>The books listed above formed the foundation of the New Testament canon recognized by the early Church before 325 AD. These texts played a pivotal role in shaping Christian theology, worship, and community life, laying the groundwork for the formal canonization process that followed in subsequent centuries.</p>
+    </div>
+  </div>
+</body>
+</html>

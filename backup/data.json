@@ -1,0 +1,36 @@
+{
+    "writings": [
+      {
+        "title": "Gospel of Matthew",
+        "author": "Matthew",
+        "description": "One of the four canonical gospels, focusing on Jesus' teachings.",
+        "image": "./images/matthew.jpg",
+        "category": "Scripture",
+        "date": "1st-century"
+      },
+      {
+        "title": "Didache",
+        "author": "Unknown",
+        "description": "An early Christian treatise on ethics and church practices.",
+        "image": "./images/didache.jpg",
+        "category": "Church Manual",
+        "date": "late-1st-early-2nd-century"
+      },
+      {
+        "title": "Epistle of Barnabas",
+        "author": "Barnabas",
+        "description": "A theological letter discussing the relationship between the Old and New Covenants.",
+        "image": "./images/barnabas.jpg",
+        "category": "Theology",
+        "date": "late-1st-early-2nd-century"
+      },
+      {
+        "title": "Shepherd of Hermas",
+        "author": "Hermas",
+        "description": "An apocalyptic work with visions and parables.",
+        "image": "./images/hermas.jpg",
+        "category": "Apocalyptic",
+        "date": "early-2nd-century"
+      }
+    ]
+  }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Veiling Only Cultural? A Theological Inquiry</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+      h1 {
+        text-align: center;
+        color: #444;
+      }
+      .question {
+        margin: 20px 0;
+        padding: 15px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .answer-options {
+        margin-top: 10px;
+      }
+      .answer-options button {
+        margin-right: 10px;
+        padding: 10px 20px;
+        background: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .answer-options button:hover {
+        background: #0056b3;
+      }
+      .response {
+        margin-top: 10px;
+        padding: 10px;
+        background: #f1f1f1;
+        border-left: 4px solid #ccc;
+        display: none;
+      }
+    </style>
+    <script>
+      function showResponse(questionId, responseType) {
+        const responseElement = document.getElementById(`${questionId}-${responseType}`);
+        const allResponses = document.querySelectorAll(`#${questionId} .response`);
+        allResponses.forEach((response) => (response.style.display = "none"));
+        responseElement.style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Is Veiling Only Cultural? A Theological Inquiry</h1>
+    <p>This questionnaire evaluates whether the belief that veiling is merely
+      cultural aligns with scriptural, historical, and theological evidence.
+      Select "True" or "False" for each question to see the reasoning behind the
+      answer.</p>
+    <div id="question1" class="question">
+      <h2>1. Paul connects veiling to creation. (e.g., angels, creation order,
+        nature)</h2>
+      <div class="answer-options"> <button onclick="showResponse('question1', 'true')">True</button>
+        <button onclick="showResponse('question1', 'false')">False</button> </div>
+      <div id="question1-true" class="response">
+        <p><strong>Correct.</strong> Paul grounds veiling in the order of
+          creation, making it a theological principle that transcends cultural
+          boundaries. (Source: Antiveil Evidence 13)</p>
+      </div>
+      <div id="question1-false" class="response">
+        <p><strong>Reconsider.</strong> Paul’s reference to creation (1
+          Corinthians 11:7-9) indicates a universal theological principle, not a
+          cultural one. (Source: Antiveil Evidence 13)</p>
+      </div>
+    </div>
+    <div id="question2" class="question">
+      <h2>2. Paul addresses only Corinth and not all churches.</h2>
+      <div class="answer-options"> <button onclick="showResponse('question2', 'true')">True</button>
+        <button onclick="showResponse('question2', 'false')">False</button> </div>
+      <div id="question2-true" class="response">
+        <p><strong>Reconsider.</strong> Paul addressed the wider Christian Body
+          at the start of his letter. (See 1 Cor 1:2) "To the Assembly of God
+          that is in Corinth, [and] to those sanctified in Christ Jesus, called
+          holy one") Paul asks Christians to distrubte his letters to all.
+          (Colossians 4:16) "And when the letter may be read with you, cause that it may also be read in the assembly of the Laodiceans, and the one from Laodicea that you also read." </p>
+      </div>
+      <div id="question2-false" class="response">
+        <p><strong>The answer is False.</strong> Paul addressed the wider Christian Body
+          at the start of his letter. (See 1 Cor 1:2) "To the Assembly of God
+          that is in Corinth, [and] to those sanctified in Christ Jesus, called
+          holy one") Paul asks Christians to distrubte his letters to all.
+          (Colossians 4:16) "And when the letter may be read with you, cause that it may also be read in the assembly of the Laodiceans, and the one from Laodicea that you also read." </p>
+      </div>
+    </div>
+    <div id="question3" class="question">
+      <h2>3. History supports the idea that veiling was temporary.</h2>
+      <div class="answer-options"> <button onclick="showResponse('question3', 'true')">True</button>
+        <button onclick="showResponse('question3', 'false')">False</button> </div>
+      <div id="question3-true" class="response">
+        <p><strong>Reconsider.</strong> The long-standing tradition of veiling
+          in Christian history contradicts the claim that it was merely a
+          temporary cultural practice. (Source: Scholarrebuke Evidence 16)</p>
+      </div>
+      <div id="question3-false" class="response">
+        <p><strong>Correct.</strong> Historical evidence shows veiling was a
+          consistent Christian practice across centuries, not limited to Corinth
+          or the 1st century. (Source: Scholarrebuke Evidence 16)</p>
+      </div>
+    </div>
+    <div id="question4" class="question">
+      <h2>4. Paul is known for endorsing worldly or cultural practices solely to
+        maintain peace.</h2>
+      <div class="answer-options"> <button onclick="showResponse('question4', 'true')">True</button>
+        <button onclick="showResponse('question4', 'false')">False</button> </div>
+      <div id="question4-true" class="response">
+        <p><strong>Reconsider.</strong> Romans 12:2 (NIV) affirms Paul’s stance:
+          "Do not conform to the pattern of this world, but be transformed by
+          the renewing of your mind. Then you will be able to test and approve
+          what God’s will is—his good, pleasing and perfect will." Paul
+          prioritized theological principles over cultural conformity.</p>
+      </div>
+      <div id="question4-false" class="response">
+        <p><strong>Correct.</strong> Romans 12:2 (NIV) affirms Paul’s stance:
+          "Do not conform to the pattern of this world, but be transformed by
+          the renewing of your mind. Then you will be able to test and approve
+          what God’s will is—his good, pleasing and perfect will." Paul
+          prioritized theological principles over cultural conformity.</p>
+      </div>
+          </div>
+
+      
+      
+  </body>
+</html>

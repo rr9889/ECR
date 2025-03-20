@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology of Women</title>
+    <link rel="stylesheet" href="medium.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="article-meta">
+          <div class="author-info">
+            <div class="author-date">
+              <div class="author-name">March 16, 2025</div>
+            </div>
+          </div>
+        </div>
+        <h1>Psychology of Women</h1>
+        <div class="subtitle">The No-BS Guide</div>
+        <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436567/799942/main-image"
+          alt="Minimalist desk setup with laptop" class="featured-image"></header>
+      <div class="article-content">
+        <h2>First Century</h2>
+        <p style="text-align: justify;">A majority of scholars conclude that
+          infant baptism was not widely practiced in the 1st century due to the
+          absence of clear, explicit evidence (Ferguson, 2009; Wright, 2007;
+          Cross &amp; Livingstone, 2005; Grenz, 2000, p. 528). Infant baptism is
+          certainly provable only from the third century and that its earliest
+          literary traces belong to the outgoings of the second century, cannot
+          be contested from the sources (Jeremias, 2004, p.30). Jeremias quotes
+          forty ancient documents as sources, of which twenty five are
+          designated as explicit references to infant baptism – the earliest
+          dating from 200 A.D (Stander, H., &amp; Louw, 2004, p.17).
+          First-century Christians believed that small children, especially
+          infants, were inherently sinless, so conversion was achieved by
+          personally persuading children rather than through a formal baptismal
+          rite for infants (Keeran, 2009, p. 11). This view is supported by
+          early texts; for example, the Didache (c. 80 AD) favors adult baptism,
+          implying that its author held that children were born sinless, and the
+          Epistle of Barnabas (c. 70 AD) similarly assumes infant sinlessness
+          (Wiley, 2002, pp. 38–39). Thus, Christianity at this stage, had no
+          specific doctrine of original sin (Obach, 2008, p. 41).</p>
+        <h2>Second Century</h2>
+        <p></p>
+        <p>Begin with an audit of your digital life. Which apps do you actually
+          use? Which subscriptions provide real value? Which notifications
+          deserve to interrupt your day? Be ruthless in eliminating the
+          unnecessary.</p>
+        <p>Next, establish boundaries. Consider implementing tech-free times or
+          zones in your life. Perhaps your bedroom becomes a phone-free
+          sanctuary, or the first hour of your morning is reserved for
+          non-digital activities. These boundaries help break the cycle of
+          compulsive checking and scrolling.</p>
+        <p>Finally, optimize what remains. Customize your digital tools to serve
+          your needs rather than the other way around. This might mean turning
+          off autoplay features, using browser extensions that block distracting
+          elements, or setting up automation to reduce digital busywork.</p>
+        <h2>The Paradox of Choice in Software Design</h2>
+        <p>For those of us who build technology, there's a valuable lesson here.
+          The impulse to add features—to solve every edge case and accommodate
+          every user preference—often results in bloated, confusing products
+          that serve no one particularly well.</p>
+        <p>The most beloved and enduring tech products often excel not because
+          they do everything, but because they do a few things exceptionally
+          well. They embody a clear vision and maintain a focused purpose. They
+          understand that simplicity is not the absence of capability, but the
+          presence of elegance.</p>
+        <h2>The Future Is Less</h2>
+        <p>As we move forward into an increasingly digital future, perhaps our
+          greatest challenge will not be creating more technology, but creating
+          better technology—tools that respect our attention, simplify rather
+          than complicate, and enhance our humanity rather than diminish it.</p>
+        <p>The next revolution in tech may not be about what new capabilities we
+          can add, but what distractions we can eliminate. In a world of endless
+          options and infinite content, the ability to focus might become our
+          most precious resource.</p>
+        <p>Digital minimalism offers a path forward—not by rejecting the amazing
+          tools we've created, but by putting them in their proper place. By
+          choosing less, we might actually gain more: more focus, more peace,
+          and more meaningful connection in both our digital and physical lives.</p>
+      </div>
+      <div class="author-section"> <img src="https://s3-eu-west-1.amazonaws.com/ngs-mw-prod/8/42/52248/52248.jpg"
+          alt="Sarah Johnson" class="author-large-avatar">
+        <div class="author-bio">
+          <h3>Thought</h3>
+          <p>PLACEHOLDER</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veiling Perspectives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .diagram {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .column {
+            flex: 1;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .column h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        .topic {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .topic:hover {
+            background-color: #2980b9;
+            transform: translateX(5px);
+        }
+
+        .content {
+            display: none;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .citation {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .diagram {
+                flex-direction: column;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Perspectives on Veiling</h1>
+      <div class="diagram">
+        <div class="column">
+          <h2>Pro-Veiling Stances</h2>
+          <div class="topic" onclick="toggleContent(this)">Biblical Command</div>
+          <div class="content">
+            <p>Paul's instructions in 1 Corinthians 11:2-16 are seen as a divine
+              command, rooted in apostolic authority and the universal practice
+              of early churches, not merely a cultural suggestion.</p>
+            <div class="citation">1 Corinthians 11:16; Marlowe, M. D. (2005).
+              The woman’s headcovering.</div>
+          </div>
+          <div class="topic" onclick="toggleContent(this)">Creation Order</div>
+          <div class="content">
+            <p>Veiling reflects God’s created order, with man as the image and
+              glory of God and woman as the glory of man, symbolizing
+              hierarchical roles established in Genesis.</p>
+            <div class="citation">Sproul, R.C. (1977). Knowing Scripture;
+              Osburn, C. D. (2007). Essays on Women in Earliest Christianity.</div>
+          </div>
+          <div class="topic" onclick="toggleContent(this)">Modesty and
+            Submission</div>
+          <div class="content">
+            <p>The head covering symbolizes modesty and submission to male
+              authority, aligning with cultural norms of honor and shame in
+              worship settings.</p>
+            <div class="citation">Tertullian (c. 200 AD). On the Veiling of
+              Virgins; Naselli, A. D. (n.d.). Women and head coverings.</div>
+          </div>
+          <div class="topic" onclick="toggleContent(this)">Early Church Practice</div>
+          <div class="content">
+            <p>Early Church Fathers and historical practice consistently
+              supported veiling as a universal Christian tradition, not a local
+              custom.</p>
+            <div class="citation">Irenaeus (c. 130–202). Against Heresies;
+              Bercot, D. (n.d.). Head covering through the centuries.</div>
+          </div>
+        </div>
+        <div class="column">
+          <h2>Anti-Veiling Stances</h2>
+          <div class="topic" onclick="toggleContent(this)">Cultural Context</div>
+          <div class="content">
+            <p>Paul’s instructions were specific to 1st-century Corinthian
+              culture, addressing honor-shame norms irrelevant to modern
+              contexts.</p>
+            <div class="citation">Fee, G. D. (1987). The First Epistle to the
+              Corinthians; Garland, D. E. (2003). 1 Corinthians.</div>
+          </div>
+          <div class="topic" onclick="toggleContent(this)">Equality in Christ</div>
+          <div class="content">
+            <p>Veiling contradicts Paul’s theology of equality in Christ,
+              emphasizing mutual dependence over hierarchy.</p>
+            <div class="citation">Witt, W. (2020). Women in holy orders;
+              Peppiatt, L. (2018). Unveiling Paul’s women.</div>
+          </div>
+          <div class="topic" onclick="toggleContent(this)">Symbolic Flexibility</div>
+          <div class="content">
+            <p>The principle of submission can be expressed without literal
+              veiling, adapting to contemporary cultural symbols.</p>
+            <div class="citation">Schreiner, T. R. (2005). Head Coverings;
+              Constable, T. L. (2025). Notes on 1 Corinthians.</div>
+          </div>
+          <div class="topic" onclick="toggleContent(this)">Non-Pauline
+            Interpolation</div>
+          <div class="content">
+            <p>Some argue the passage is a later addition, not reflective of
+              Paul’s original theology, thus not binding.</p>
+            <div class="citation">Walker Jr., W. O. (1975). 1 Corinthians
+              11:2-16; Mount, C. (2005). Spirit possession.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            // Close all other contents
+            document.querySelectorAll('.content').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle clicked content
+            if (!isActive) {
+                content.classList.add('active');
+            }
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-325 AD Accepted Books</title>
+    <link rel="stylesheet" href="./css/fstyles.css">
+  </head>
+  <body>
+    <div id="announcement-banner" class="banner-container">
+      <div class="banner-text"> <a href="index.html" class="banner-link">BACK
+          TO MAIN SITE</a> </div>
+    </div>
+    <nav class="toc">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#accepted-books">Accepted Books</a></li>
+        <li><a href="#theological-context">Theological Context</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="centre_me">Canon Books (Pre-325 AD)</h1>
+      <h1 class="centre_me"></h1>
+      <div class="header-container"><br>
+        <div class="header-text">
+          <p><em>In the year of our Lord 2025, on the sixth day of January...</em></p>
+        </div>
+      </div>
+      <h1 id="introduction">Introduction</h1>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <p style="text-align: justify;">The period leading up to the Council of
+          Nicaea in 325 AD was critical in shaping the New Testament canon. The
+          writings of Church Fathers such as Irenaeus, Tertullian, Origen, and
+          Eusebius, along with documents like the Muratorian Fragment, provide
+          insight into which books were widely accepted among early Christians.
+          This article highlights the key texts recognized during this era.</p>
+      </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <h2>Matthew</h2>
+        <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">
+          <div style="display: flex; align-items: flex-start;">
+            <!-- Image of Matthew -->&nbsp;
+            <!-- Text Content -->
+            <div>
+              <p>The Church Fathers universally recognized Matthew as the author
+                of the first Gospel, written in Hebrew (or Aramaic) for a Jewish
+                audience. </p>
+              <p>Irenaeus of Lyons stated that "Matthew also issued a written
+                Gospel among the Hebrews in their own dialect" (<em>Against
+                  Heresies</em>, 3.1.1), emphasizing its Jewish focus. Papias of
+                Hierapolis noted that "Matthew compiled the sayings [of Jesus]
+                in the Hebrew language" (<em>Expositions of the Sayings of the
+                  Lord</em>), highlighting its role in preserving Jesus’
+                teachings and fulfilling Old Testament prophecies. Origen
+                affirmed Matthew’s Gospel as the first written and widely used (<em>Eusebius,
+                  Ecclesiastical History</em>, 6.25.4), and Eusebius of Caesarea
+                confirmed its acceptance as Scripture (<em>Ecclesiastical
+                  History</em>, 3.24.6). Matthew’s Gospel was valued for its
+                apostolic origin, Jewish perspective, and emphasis on Jesus as
+                the Messiah.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Mark</h2>
+      <div style="display: flex; align-items: flex-start;">
+        <!-- Image of Mark --> ]
+        <!-- Text Content -->
+        <div>
+          <p style="text-align: justify;">The Church Fathers unanimously
+            affirmed that Mark wrote his Gospel based on the teachings of Peter,
+            making it an accurate and reliable account of Christ’s life and
+            ministry. </p>
+          <p style="text-align: justify;">Papias of Hierapolis (early 2nd
+            century) stated that Mark, as Peter’s interpreter, "wrote down
+            accurately, though not in order, whatsoever he remembered of the
+            things said or done by Christ" (<em>Expositions of the Sayings of
+              the Lord</em>). This connection to Peter gave Mark’s Gospel
+            apostolic authority, even though it was not written by an apostle
+            directly. Irenaeus of Lyons (late 2nd century) also confirmed Mark’s
+            role as Peter’s disciple, emphasizing the Gospel’s reliability (<em>Against
+              Heresies</em>, 3.1.1). The early Church accepted Mark’s Gospel as
+            Scripture, valuing its close association with Peter’s eyewitness
+            testimony.</p>
+        </div>
+      </div>
+      <h2>Luke</h2>
+      <p style="text-align: justify;">The Church Fathers recognized Luke as a
+        companion of Paul and the author of both the Gospel of Luke and the Acts
+        of the Apostles. </p>
+      <p style="text-align: justify;"> Irenaeus of Lyons stated that "Luke, the
+        companion of Paul, recorded in a book the Gospel preached by him" (<em>Against
+          Heresies</em>, 3.1.1), highlighting Luke’s role in preserving Paul’s
+        teachings. Tertullian (early 3rd century) also affirmed Luke’s Gospel as
+        authoritative, noting its connection to Paul (<em>Against Marcion</em>,
+        4.2). The early Church valued Luke’s Gospel for its detailed and orderly
+        account of Christ’s life, as well as its emphasis on the universality of
+        the gospel message. Luke’s status as a close associate of Paul ensured
+        its acceptance as Scripture.</p>
+      <h2>John</h2>
+      <p style="text-align: justify;">The Church Fathers universally
+        acknowledged John, the beloved disciple, as the author of the Gospel of
+        John. </p>
+      <p style="text-align: justify;">Irenaeus of Lyons wrote that "John, the
+        disciple of the Lord, did himself publish a Gospel during his residence
+        at Ephesus" (<em>Against Heresies</em>, 3.1.1), emphasizing its
+        apostolic origin. Clement of Alexandria (late 2nd century) described
+        John’s Gospel as a "spiritual Gospel," written to complement the more
+        historical accounts of the Synoptic Gospels (<em>Eusebius,
+          Ecclesiastical History</em>, 6.14.7). The early Church revered John’s
+        Gospel for its profound theological insights, particularly its emphasis
+        on Christ’s divinity and the incarnation. Its apostolic authorship and
+        unique perspective made it an indispensable part of the New Testament
+        canon.</p>
+      <h2>Acts of the Apostles</h2>
+      <p style="text-align: justify;">The Church Fathers universally recognized
+        the Acts of the Apostles as Scripture and attributed its authorship to
+        Luke, the companion of Paul.</p>
+      <p style="text-align: justify;">Irenaeus of Lyons stated that "Luke also,
+        the companion of Paul, recorded in a book the Gospel preached by him,
+        and the acts of the apostles" (Against Heresies, 3.1.1). This affirmed
+        Luke’s authorship and the book’s connection to Paul’s ministry.Clement
+        of Alexandria (late 2nd century) referred to Acts as authoritative,
+        using it to support his teachings (Stromata, 5.12). Tertullian also
+        accepted Acts as canonical, calling it "the Acts of the Apostles" and
+        using it to defend orthodox Christianity (On Prescription Against
+        Heretics, 22). Eusebius of Caesarea included Acts among the universally
+        accepted books of the New Testament, noting its widespread use in the
+        early Church (Ecclesiastical History, 3.25.1). The early Church valued
+        Acts for its historical account of the early Church’s growth, the spread
+        of the gospel, and the work of the Holy Spirit through the apostles,
+        particularly Peter and Paul.</p>
+      <h2>Pauline Epistles</h2>
+      <p style="text-align: justify;">The Pauline Epistles were universally
+        accepted as authoritative Scripture by early Christian writers. </p>
+      <p style="text-align: justify;">Clement of Rome frequently quoted Paul’s
+        letters, especially 1 Corinthians and Romans, urging the Corinthian
+        church to "take up the epistle of the blessed Paul the Apostle" (<em>1
+          Clement</em>, 47.1–3). Ignatius of Antioch referred to Paul as a model
+        of faith and often alluded to his epistles, particularly Ephesians (<em>Letter
+          to the Ephesians</em>, 12.2). Polycarp of Smyrna encouraged the
+        Philippians to study Paul’s letters, stating they would "be built up in
+        the faith" (<em>Letter to the Philippians</em>, 3.2).</p>
+      <p style="text-align: justify;">By the late 2nd century, Irenaeus of Lyons
+        extensively quoted Paul’s epistles, calling them "Scripture" and using
+        them to defend orthodox Christianity (<em>Against Heresies</em>,
+        3.14.1). Tertullian defended Paul’s letters against Marcion, who had
+        tried to edit them, arguing that the Ephesians, Philippians, and others
+        were authoritative (<em>Against Marcion</em>, 5.17–21). Origen accepted
+        all 13 Pauline epistles as authoritative and frequently quoted them in
+        his commentaries. Eusebius of Caesarea listed all 13 as universally
+        accepted, noting their widespread use (<em>Ecclesiastical History</em>,
+        3.3.5).</p>
+      <ul>
+        <li>Romans</li>
+        <li>1–2 Corinthians</li>
+        <li>Galatians</li>
+        <li>Ephesians</li>
+        <li>Philippians</li>
+        <li>Colossians</li>
+        <li>1–2 Thessalonians</li>
+        <li>1–2 Timothy</li>
+        <li>Titus</li>
+        <li>Philemon</li>
+      </ul>
+      <h2>General Epistles<strong></strong></h2>
+      <div style="text-align: justify;"> The Church Fathers universally
+        recognized 1 Peter as an authoritative epistle written by the apostle
+        Peter.</div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><br>
+      </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">
+        Irenaeus of Lyons (late 2nd century) quoted from 1 Peter, referring to
+        it as Scripture and using it to defend orthodox teachings (Against
+        Heresies, 4.9.2). Clement of Alexandria (late 2nd century) also cited 1
+        Peter, emphasizing its exhortations to holiness and its apostolic
+        authority (Stromata, 4.20). Tertullian (early 3rd century) affirmed its
+        widespread acceptance, stating that "Peter’s Epistle is recognized by
+        all" (On Modesty, 20). Eusebius of Caesarea (early 4th century) included
+        1 Peter among the universally accepted books of the New Testament
+        (Ecclesiastical History, 3.3.1). The early Church valued 1 Peter for its
+        encouragement to persecuted Christians and its emphasis on living a holy
+        life.</div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <p style="text-align: justify;">The Church Fathers also universally
+          accepted 1 John as Scripture, attributing it to the apostle John.</p>
+        <p style="text-align: justify;"> Irenaeus of Lyons frequently quoted 1
+          John, calling it "the Epistle of John" and using it to combat heresies
+          like Gnosticism (<em>Against Heresies</em>, 3.16.5). Clement of
+          Alexandria referred to 1 John as authoritative, highlighting its
+          teachings on love and truth (<em>Stromata</em>, 2.15). Origen (early
+          3rd century) affirmed 1 John as part of the undisputed books of the
+          New Testament (<em>Commentary on John</em>). Eusebius of Caesarea
+          confirmed its universal acceptance, noting its widespread use in the
+          early Church (<em>Ecclesiastical History</em>, 3.25.2). The early
+          Church valued 1 John for its profound theological insights,
+          particularly its emphasis on love, truth, and the incarnation of
+          Christ.</p>
+        <p></p>
+        <ul>
+          <li>1 Peter</li>
+          <li>1 John</li>
+        </ul>
+        <h2>Revelation</h2>
+        <p style="text-align: justify;">The Book of Revelation (also called the
+          Apocalypse of John) was widely accepted by many early Church Fathers
+          as Scripture, though its canonicity was debated by some.</p>
+        <p style="text-align: justify;">Justin Martyr (mid-2nd century) accepted
+          Revelation as Scripture, referring to it as the work of "John, one of
+          the apostles of Christ" (Dialogue with Trypho, 81). Irenaeus of Lyons
+          (late 2nd century) strongly affirmed Revelation’s apostolic
+          authorship, stating that it was written by "John, the disciple of the
+          Lord" (Against Heresies, 4.20.11). He used it extensively to defend
+          orthodox teachings, particularly on eschatology (the study of end
+          times). Clement of Alexandria (late 2nd century) also accepted
+          Revelation as authoritative, quoting from it in his writings
+          (Stromata, 6.13). Tertullian (early 3rd century) regarded Revelation
+          as Scripture, using it to support his arguments on the resurrection
+          and the final judgment (On the Resurrection of the Flesh, 24).</p>
+        <p style="text-align: justify;">Rejection Opinion - Dionysius of
+          Alexandria argued Revelation was not written by John the Apostle due
+          to differences in style, vocabulary, and theology compared to the
+          Gospel and epistles of John. He suggested it might have been written
+          by John the Elder, a different figure. Additionally, he urged careful
+          handling of its symbolic content to avoid misuse.</p>
+        <p style="text-align: justify;">Eusebius of Caesarea listed Revelation
+          among the "disputed books" (antilegomena), noting some churches
+          questioned its apostolic authorship. He acknowledged its wider
+          acceptance in the Western Church but skepticism in the Eastern Church,
+          partly due to associations with Montanism. Overall he acknowledged its
+          use by early writers but documented ongoing debates about its
+          authority.</p>
+      </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <h2>Disputed Books</h2>
+        <strong>James</strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">Origen
+        said "The Epistle of James is said to be his." (Commentary on John).
+        Origen acknowledged James as Scripture but noted its disputed status, as
+        some questioned its apostolic authority.&nbsp; Eusebius of Caesarea
+        listed James among the "disputed books" (antilegomena), noting that
+        while it was widely read, some churches questioned its canonicity
+        (Ecclesiastical History, 3.25.3).&nbsp; Jerome accepted James as
+        canonical, attributing it to James, the brother of Jesus (Lives of
+        Illustrious Men, 2).<strong></strong><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong>2
+          Peter</strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">Eusebius
+        of Caesarea said "Peter’s second Epistle is disputed." (Ecclesiastical
+        History, 3.3.1). Eusebius noted that 2 Peter was not as widely accepted
+        as 1 Peter, with some early Christians questioning its authenticity due
+        to differences in style and content. Origen stated "Peter left one
+        Epistle... perhaps also a second, but this is doubted." (Eusebius,
+        Ecclesiastical History, 6.25.8). Origen acknowledged its use but
+        expressed uncertainty about its authorship. Jerome accepted 2 Peter as
+        canonical, though he noted its disputed status (Lives of Illustrious
+        Men, 1).<strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong></strong><strong></strong><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong>2
+          John</strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">Origen
+        stated "John wrote two Epistles... but the second is disputed."
+        (Commentary on John). Origen recognized 2 John as part of the Johannine
+        writings but noted that its brevity and limited circulation led some to
+        question its authority.Eusebius of Caesarea listed 2 John among the
+        "disputed books" (antilegomena), noting that while it was accepted by
+        many, others doubted its canonicity (Ecclesiastical History, 3.25.3).
+        Jerome accepted 2 John as canonical, though he acknowledged its disputed
+        status (Lives of Illustrious Men, 9).<strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong></strong><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong>Epistle
+          of Barnabas</strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">Accepted
+        Opinion - Clement of Alexandria highly valued the Epistle of Barnabas,
+        quoting it extensively in his writings (Stromata, 2.6, 2.7, 2.20). He
+        treated it as Scripture and used it to support his theological
+        arguments. He referred to it as a "Catholic Epistle," indicating its
+        widespread use in the early Church. Origen also held the Epistle of
+        Barnabas in high regard, referring to it as a "useful" and "instructive"
+        text (Commentary on Romans). However, he did not explicitly include it
+        in his list of canonical books.</div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><br>
+      </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">Rejected
+        Opinion - Eusebius of Caesarea listed the Epistle of Barnabas among the
+        "disputed books", noting that while it was widely read, it was not
+        universally accepted as Scripture (Ecclesiastical History, 3.25.4). He
+        classified it as a "spurious" work, meaning it was not considered part
+        of the New Testament canon. Jerome acknowledged the Epistle of Barnabas
+        as a valuable early Christian text but did not include it in his list of
+        canonical books (Lives of Illustrious Men, 6).</div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong></strong><strong><br>
+        </strong></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><strong>Shepherd
+          of Hermas</strong> </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><span
+          class="quote"><br>
+        </span></div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143; text-align: justify;">The
+        Shepherd of Hermas was a popular and influential text in the early
+        Church, but its canonicity was debated. Early Church Fathers like
+        Irenaeus of Lyons, Clement of Alexandria, and Origen valued it for its
+        teachings on repentance and moral living, often quoting it as Scripture
+        or an authoritative text. However, others like Eusebius of Caesarea,
+        Athanasius of Alexandria, and Jerome classified it as non-canonical,
+        though they acknowledged its spiritual and instructional value. While
+        widely read and respected, the Shepherd of Hermas was ultimately
+        excluded from the New Testament canon due to doubts about its apostolic
+        authorship and theological content. Despite this, it remains an
+        important early Christian text, offering insights into the early
+        Church’s emphasis on repentance, ethical living, and visionary
+        teachings.</div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;"><br>
+      </div>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <h2>Total Rejection</h2>
+        <h3><strong>Apocryphal Gospels</strong></h3>
+        <ul>
+          <li>
+            <p><strong>Gospel of Thomas</strong>: Used by Gnostic Christians but
+              rejected by the orthodox Church for its unorthodox teachings.</p>
+          </li>
+          <li>
+            <p><strong>Gospel of Peter</strong>: Criticized for its docetic
+              tendencies (denying Jesus’ humanity) and excluded from the canon.</p>
+          </li>
+          <li>
+            <p><strong>Infancy Gospel of Thomas</strong>: Considered fanciful
+              and unreliable, not accepted as Scripture.</p>
+          </li>
+          <li>
+            <p><strong>Protoevangelium of James</strong>: Popular for its focus
+              on Mary’s life, but not included in the canon.</p>
+          </li>
+        </ul>
+        <h3><strong>Apocryphal Acts</strong></h3>
+        <ul>
+          <li>
+            <p><strong>Acts of Paul</strong>: Included the story of Thecla but
+              rejected for its unorthodox teachings.</p>
+          </li>
+          <li>
+            <p><strong>Acts of Peter</strong>: Focused on Peter’s miracles but
+              excluded due to its association with docetism.</p>
+          </li>
+          <li>
+            <p><strong>Acts of John</strong>: Contained Gnostic ideas and was
+              rejected by the orthodox Church.</p>
+          </li>
+          <li>
+            <p><strong>Acts of Andrew</strong>: Described Andrew’s missionary
+              journeys, but its canonicity was disputed.</p>
+          </li>
+        </ul>
+        <h3><strong>Apocryphal Epistles</strong></h3>
+        <ul>
+          <li>
+            <p><strong>Epistle to the Laodiceans</strong>: Attributed to Paul
+              but considered spurious by the Church Fathers.</p>
+          </li>
+          <li>
+            <p><strong>3 Corinthians</strong>: Attributed to Paul but rejected
+              for its lack of authenticity.</p>
+          </li>
+          <li>
+            <p><strong>Epistle of Polycarp to the Philippians</strong>:
+              Respected but not considered Scripture.</p>
+          </li>
+        </ul>
+        <h3><strong>Apocalyptic and Visionary Literature</strong></h3>
+        <ul>
+          <li>
+            <p><strong>Apocalypse of Peter</strong>: Respected by some for its
+              visions of heaven and hell, but excluded from the canon.</p>
+          </li>
+          <li>
+            <p><strong>Apocalypse of Paul</strong>: Popular for its detailed
+              account of Paul’s vision of the afterlife, but not accepted as
+              Scripture.</p>
+          </li>
+        </ul>
+        <p></p>
+        <ul>
+        </ul>
+        <h2>Conclusion</h2>
+        <!-- Universal Canon -->
+        <p class="center"><b>Universal Canon (All Communities)</b></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Books</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gospels</td>
+              <td>Matthew, Mark, Luke, John</td>
+            </tr>
+            <tr>
+              <td>Acts</td>
+              <td>Acts of the Apostles</td>
+            </tr>
+            <tr>
+              <td>Pauline Epistles</td>
+              <td>Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians,
+                Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1
+                Timothy, 2 Timothy, Titus, Philemon</td>
+            </tr>
+            <tr>
+              <td>General Epistles</td>
+              <td>1 Peter, 1 John</td>
+            </tr>
+            <tr>
+              <td>Revelation</td>
+              <td>Revelation</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Syrian Church -->
+        <p class="center"><b>Syrian Church</b></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Additional Books</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Additional Books</td>
+              <td> - Diatessaron (Gospel harmony)<br>
+                - Odes of Solomon (early Christian hymns) </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Western Church -->
+        <p class="center"><b>Western Church</b></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Additional Books</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Additional Books</td>
+              <td> - Shepherd of Hermas (on repentance)<br>
+                - 1 Clement (letter from Clement of Rome) </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Egyptian Church -->
+        <p class="center"><b>Egyptian Church</b></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Additional Books</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Additional Books</td>
+              <td> - Epistle of Barnabas (allegorical interpretation)<br>
+                - Gospel of Thomas (Gnostic sayings of Jesus) </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Ethiopian Church -->
+        <h3>Ethiopian Church</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Additional Books</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Additional Books</td>
+              <td> - 1 Enoch (apocalyptic text)<br>
+                - Jubilees (retelling of Genesis and Exodus)<br>
+                - Sinodos (liturgical book)<br>
+                - Clement (additional writings) </td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

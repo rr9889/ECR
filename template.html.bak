@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infant Baptism</title>
+    <link rel="stylesheet" href="one.css">
+  </head>
+  <body><span style="color: #343434;"> </span>
+    <div id="announcement-banner" class="banner-container">
+      <div class="banner-text"> <span style="color: #343434;"><a href="index.html"
+            class="banner-link">BACK TO MAIN SITE</a></span> </div>
+    </div>
+    <span style="color: #343434;">
+      <!--
+    <nav class="toc">      <ul>        <li><a href="#1cen">1st Century</a></li>        <li><a href="#icon">Early Icons</a></li>        <li><a href="#ecf">Early Christian Leaders</a></li>        <li><a href="#br">Baptism</a></li>        <li><a href="#ir">Infant Requirements</a></li>        <li><a href="#con">Conclusion</a></li>      </ul>    </nav>    -->
+    </span>
+    <div class="container">
+      <h1 class="unique-title centre_me"><span style="color: #343434;">Infant
+          Baptism</span></h1>
+      <h1><span style="color: #343434;">1st Century</span></h1>
+      <p>xxxx</p>
+      <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+        <p data-start="1924" data-end="2008" data-is-last-node=""></p>
+        <p style="text-align: justify;"><span style="color: #343434;"><span class="ref"><span
+                class="ref-box">- Ferguson, E. (2009). <em>Baptism in the Early
+                  Church: History, Theology, and Liturgy in the First Five
+                  Centuries</em>. Grand Rapids: Eerdmans.<br>
+                - Wright, D. F. (2007). <em>Infant Baptism in Historical
+                  Perspective</em>. Paternoster Press.<br>
+                - Jeremias, J. (1960). <em>The Origins of Infant Baptism</em>.
+                London: SCM Press.<br>
+                - Cross, F. L., &amp; Livingstone, E. A. (Eds.). (2005). <em>The
+                  Oxford Dictionary of the Christian Church</em>. Oxford
+                University Press.</span></span></span></p>
+      </div>
+    </div>
+    <span style="color: #343434;"> </span>
+  </body>
+</html>
