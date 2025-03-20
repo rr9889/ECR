@@ -1,0 +1,50 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #333;
+    color: white;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.article-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.article-card h3 {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+}
