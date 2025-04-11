@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Technologies Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .quiz-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 90%;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        #question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #dcdcdc;
+        }
+        .option input {
+            margin-right: 10px;
+        }
+        #submit, #next, #restart {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        #submit:hover, #next:hover, #restart:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Internet Technologies Quiz</h1>
+        <div id="question"></div>
+        <div id="options"></div>
+        <button id="submit" onclick="submitAnswer()">Submit Answer</button>
+        <button id="next" class="hidden" onclick="nextQuestion()">Next Question</button>
+        <div id="result" class="hidden"></div>
+        <button id="restart" class="hidden" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the primary function of TCP/IP?",
+                options: [
+                    "Manages physical connections",
+                    "Translates domain names",
+                    "Ensures reliable data transmission",
+                    "Encrypts data"
+                ],
+                correct: 2,
+                feedback: "TCP/IP ensures reliable data transmission with error checking."
+            },
+            {
+                question: "Which protocol translates domain names to IP addresses?",
+                options: ["SMTP", "HTTP", "DNS", "VPN"],
+                correct: 2,
+                feedback: "DNS translates human-readable domain names into IP addresses."
+            },
+            {
+                question: "What does HTTPS add to HTTP?",
+                options: ["Routing", "Compression", "Authentication", "Encryption"],
+                correct: 3,
+                feedback: "HTTPS adds encryption via SSL/TLS for secure data."
+            },
+            {
+                question: "What can misconfigured SSL/TLS cause?",
+                options: ["No encryption", "Broadcast storms", "Latency", "Increased speed"],
+                correct: 2,
+                feedback: "Misconfigured SSL/TLS can introduce latency."
+            },
+            {
+                question: "What is the purpose of a VPN?",
+                options: [
+                    "Manage email protocols",
+                    "Extend private network over public",
+                    "Translate IP addresses",
+                    "Connect IoT devices"
+                ],
+                correct: 1,
+                feedback: "VPNs extend private networks securely over public ones."
+            },
+            {
+                question: "Which protocol sends emails?",
+                options: ["DNS", "IMAP", "POP3", "SMTP"],
+                correct: 3,
+                feedback: "SMTP is used to send emails."
+            },
+            {
+                question: "What is a key advantage of cloud computing?",
+                options: ["High latency", "Fixed storage", "Scalability", "No connectivity"],
+                correct: 2,
+                feedback: "Cloud computing offers scalability and flexibility."
+            },
+            {
+                question: "What happens during packetization in data transmission?",
+                options: [
+                    "Data is encrypted",
+                    "Data is reassembled",
+                    "Data is sent to ISP",
+                    "Data is broken into packets"
+                ],
+                correct: 3,
+                feedback: "Packetization breaks data into packets with headers."
+            },
+            {
+                question: "What does a firewall do?",
+                options: [
+                    "Translates domain names",
+                    "Routes data",
+                    "Monitors and filters traffic",
+                    "Connects LANs"
+                ],
+                correct: 2,
+                feedback: "Firewalls monitor and filter traffic based on policies."
+            },
+            {
+                question: "What do IoT sensors/devices do?",
+                options: [
+                    "Route packets",
+                    "Collect data like temperature",
+                    "Encrypt traffic",
+                    "Translate IPs"
+                ],
+                correct: 1,
+                feedback: "IoT sensors collect data like temperature or video."
+            },
+            {
+                question: "Which TCP/IP layer handles HTTP and HTTPS?",
+                options: ["Internet", "Transport", "Network Interface", "Application"],
+                correct: 3,
+                feedback: "The Application layer handles HTTP and HTTPS."
+            },
+            {
+                question: "What is subnetting’s purpose?",
+                options: [
+                    "Increase latency",
+                    "Create smaller network segments",
+                    "Encrypt data",
+                    "Compress addresses"
+                ],
+                correct: 1,
+                feedback: "Subnetting creates smaller segments for efficiency."
+            },
+            {
+                question: "How does a bridge operate in a LAN?",
+                options: [
+                    "Encrypts signals",
+                    "Uses IP addresses",
+                    "Uses MAC addresses",
+                    "Manages emails"
+                ],
+                correct: 2,
+                feedback: "Bridges use MAC addresses to connect LAN segments."
+            },
+            {
+                question: "What is a switch’s benefit?",
+                options: [
+                    "Broadcasts traffic",
+                    "Uses IP addresses",
+                    "Isolates collision domains",
+                    "Higher latency"
+                ],
+                correct: 2,
+                feedback: "Switches isolate collision domains, reducing congestion."
+            },
+            {
+                question: "What does a router use to direct data?",
+                options: ["SSIDs", "Encryption keys", "MAC addresses", "IP addresses"],
+                correct: 3,
+                feedback: "Routers use IP addresses to direct data."
+            },
+            {
+                question: "Which 802.11 standard uses 5 GHz and 1 Gbps?",
+                options: ["802.11g", "802.11n", "802.11ac", "802.11a"],
+                correct: 2,
+                feedback: "802.11ac uses 5 GHz and supports up to 1 Gbps."
+            },
+            {
+                question: "What does CSMA/CA do in wireless networks?",
+                options: [
+                    "Encrypts data",
+                    "Routes packets",
+                    "Coordinates transmissions",
+                    "Translates SSIDs"
+                ],
+                correct: 2,
+                feedback: "CSMA/CA coordinates transmissions to avoid collisions."
+            },
+            {
+                question: "What is Bluetooth’s inquiry procedure for?",
+                options: [
+                    "Manage IPs",
+                    "Discover devices",
+                    "Route packets",
+                    "Encrypt data"
+                ],
+                correct: 1,
+                feedback: "Bluetooth’s inquiry discovers nearby devices."
+            },
+            {
+                question: "Which RFID tag uses a battery to transmit?",
+                options: ["LF", "Passive", "Active", "Semi-active"],
+                correct: 2,
+                feedback: "Active RFID tags use batteries to transmit signals."
+            },
+            {
+                question: "Which command checks IP settings at Layer 3?",
+                options: ["telnet", "arp -a", "netstat -an", "ipconfig"],
+                correct: 3,
+                feedback: "ipconfig checks IP settings at the Network layer."
+            },
+            {
+                question: "What secures TCP/IP networks?",
+                options: ["Packet sniffing", "Firewalls", "CSMA/CA", "SSID encryption"],
+                correct: 1,
+                feedback: "Firewalls protect TCP/IP networks by filtering traffic."
+            },
+            {
+                question: "Which tool verifies TCP/IP connectivity?",
+                options: ["telnet", "nslookup", "ping", "netstat -an"],
+                correct: 2,
+                feedback: "Ping tests connectivity with ICMP packets."
+            },
+            {
+                question: "What authenticates DNS responses?",
+                options: ["SSL", "DKIM", "DNSSEC", "WPA2"],
+                correct: 2,
+                feedback: "DNSSEC authenticates DNS responses to prevent spoofing."
+            },
+            {
+                question: "Which tool diagnoses DNS issues?",
+                options: ["ipconfig", "arp -a", "nslookup", "traceroute"],
+                correct: 2,
+                feedback: "Nslookup queries DNS servers for troubleshooting."
+            },
+            {
+                question: "What secures HTTPS connections?",
+                options: ["Subnet masks", "MAC addresses", "Routing tables", "SSL/TLS certificates"],
+                correct: 3,
+                feedback: "SSL/TLS certificates encrypt HTTPS connections."
+            },
+            {
+                question: "What does SSL/TLS prevent?",
+                options: ["Geo-restrictions", "Collision domains", "Eavesdropping", "Broadcast storms"],
+                correct: 2,
+                feedback: "SSL/TLS encrypts data to prevent eavesdropping."
+            },
+            {
+                question: "What benefit does a VPN provide?",
+                options: ["Broadcasts SSIDs", "Bypasses geo-restrictions", "Reduces scalability", "Increases latency"],
+                correct: 1,
+                feedback: "VPNs bypass geo-restrictions by masking location."
+            },
+            {
+                question: "Which authenticates email senders?",
+                options: ["ARP", "DKIM", "MU-MIMO", "CSMA/CA"],
+                correct: 1,
+                feedback: "DKIM authenticates email senders to reduce spam."
+            },
+            {
+                question: "What is a cloud computing downside?",
+                options: ["Low latency", "No scalability", "Security vulnerabilities", "Fixed storage"],
+                correct: 2,
+                feedback: "Cloud computing faces security risks if misconfigured."
+            },
+            {
+                question: "What happens during data transmission acknowledgment?",
+                options: ["SSIDs are broadcast", "Data is packetized", "Data is encrypted", "Missing packets retransmitted"],
+                correct: 3,
+                feedback: "TCP retransmits missing packets during acknowledgment."
+            },
+            {
+                question: "What is a subnet’s purpose?",
+                options: ["Collect IoT data", "Route packets externally", "Encrypt data", "Improve traffic efficiency"],
+                correct: 3,
+                feedback: "Subnets divide networks for better traffic management."
+            },
+            {
+                question: "What does a gateway do?",
+                options: [
+                    "Translates domain names",
+                    "Isolates collision domains",
+                    "Connects different networks/protocols",
+                    "Filters traffic"
+                ],
+                correct: 2,
+                feedback: "Gateways connect networks with different protocols."
+            },
+            {
+                question: "What secures IoT networks?",
+                options: ["Cut-through switching", "Routing tables", "Network segmentation", "Subnet masks"],
+                correct: 2,
+                feedback: "Network segmentation isolates IoT devices for security."
+            },
+            {
+                question: "What is part of TCP’s three-way handshake?",
+                options: ["ping, tracert, telnet", "WPA, WPA2, SSID", "SYN, SYN+ACK, ACK", "IP, MAC, ARP"],
+                correct: 2,
+                feedback: "TCP’s handshake uses SYN, SYN+ACK, ACK."
+            },
+            {
+                question: "What does the Internet layer handle?",
+                options: ["Collision avoidance", "Physical transfer", "Application protocols", "Logical addressing/routing"],
+                correct: 3,
+                feedback: "The Internet layer manages IP addressing and routing."
+            },
+            {
+                question: "What format does IPv4 use?",
+                options: ["16-bit compressed", "64-bit binary", "32-bit dotted decimal", "128-bit hexadecimal"],
+                correct: 2,
+                feedback: "IPv4 uses 32-bit dotted decimal (e.g., 192.168.1.1)."
+            },
+            {
+                question: "How does IPv6 handle consecutive zeros?",
+                options: ["MAC addressing", "Subnet masking", "Double-colon compression", "Dotted decimal"],
+                correct: 2,
+                feedback: "IPv6 uses double-colon for zero compression."
+            },
+            {
+                question: "What does subnetting borrow from an IP?",
+                options: ["Encryption bits", "Host bits", "MAC bits", "Protocol bits"],
+                correct: 1,
+                feedback: "Subnetting borrows host bits to create subnets."
+            },
+            {
+                question: "What can bridges cause in LANs?",
+                options: ["Packet reassembly", "Geo-restrictions", "Broadcast storms", "Data encryption"],
+                correct: 2,
+                feedback: "Bridges forward broadcasts, risking storms."
+            },
+            {
+                question: "What is store-and-forward switching?",
+                options: [
+                    "Encrypts signals",
+                    "Routes packets externally",
+                    "Forwards without checking",
+                    "Checks errors before forwarding"
+                ],
+                correct: 3,
+                feedback: "Store-and-forward checks errors, adding latency."
+            },
+            {
+                question: "What guides a router’s paths?",
+                options: ["Subnet masks", "MAC addresses", "Routing tables", "SSIDs"],
+                correct: 2,
+                feedback: "Routing tables guide packet paths using IPs."
+            },
+            {
+                question: "Which 802.11 standard uses 2.4 GHz and 11 Mbps?",
+                options: ["802.11ac", "802.11n", "802.11a", "802.11b"],
+                correct: 3,
+                feedback: "802.11b uses 2.4 GHz with 11 Mbps."
+            },
+            {
+                question: "What is a Basic Service Set (BSS)?",
+                options: ["Encryption standard", "Routing protocol", "Wireless network block", "Troubleshooting tool"],
+                correct: 2,
+                feedback: "BSS is a WLAN’s core, ad hoc or with an access point."
+            },
+            {
+                question: "What does a site survey measure?",
+                options: ["Packet loss", "IP addresses", "RF levels", "MAC tables"],
+                correct: 2,
+                feedback: "Site surveys measure RF levels for access point placement."
+            },
+            {
+                question: "What protects wireless data?",
+                options: ["netstat", "ARP", "WPA2", "DKIM"],
+                correct: 2,
+                feedback: "WPA2 encrypts wireless data for security."
+            },
+            {
+                question: "What is WiMAX suitable for?",
+                options: ["IoT data", "Close-proximity payments", "Last-mile broadband", "Cable replacement"],
+                correct: 2,
+                feedback: "WiMAX provides last-mile broadband access."
+            },
+            {
+                question: "Which RFID band has ~1 m range?",
+                options: ["2.4 GHz", "LF (125/134 kHz)", "UHF (860–960 MHz)", "HF (13.56 MHz)"],
+                correct: 3,
+                feedback: "HF (13.56 MHz) offers about 1 m range."
+            },
+            {
+                question: "What is NFC’s typical range?",
+                options: ["10 m", "1 m", "4 cm", "20 ft"],
+                correct: 2,
+                feedback: "NFC operates within 4 cm for payments."
+            },
+            {
+                question: "What is checked at the Physical layer?",
+                options: ["Application logs", "Firewall ports", "Cables and NICs", "IP settings"],
+                correct: 2,
+                feedback: "Layer 1 verifies cables and NICs."
+            },
+            {
+                question: "What is a troubleshooting practice?",
+                options: ["Packetize data", "Restart devices", "Broadcast SSIDs", "Compress IPv6"],
+                correct: 1,
+                feedback: "Restarting devices refreshes connections."
+            },
+            {
+                question: "What does IMAP allow for email?",
+                options: ["Routes packets", "Sends emails", "Multi-client sync", "Translates domains"],
+                correct: 2,
+                feedback: "IMAP syncs emails across multiple clients."
+            },
+            {
+                question: "What initiates data transmission?",
+                options: ["Firewall filtering", "ISP routing", "Application on device", "Packet reassembly"],
+                correct: 2,
+                feedback: "Data transmission starts with an application."
+            },
+            {
+                question: "What is a DMZ’s purpose?",
+                options: ["Encrypts IoT data", "Exposes external services", "Routes traffic", "Translates IPs"],
+                correct: 1,
+                feedback: "DMZ exposes services while protecting networks."
+            },
+            {
+                question: "Which is an IoT application?",
+                options: ["DNS queries", "Smart home devices", "Routing tables", "Subnetting"],
+                correct: 1,
+                feedback: "Smart home devices are IoT examples."
+            },
+            {
+                question: "What characterizes UDP?",
+                options: ["IP routing", "Physical transfer", "Connectionless", "Three-way handshake"],
+                correct: 2,
+                feedback: "UDP is connectionless, unlike TCP."
+            },
+            {
+                question: "What can transparent bridges connect?",
+                options: ["Wireless BSS", "IP networks", "Different protocol LANs", "Cloud servers"],
+                correct: 2,
+                feedback: "Transparent bridges connect same/different protocol LANs."
+            },
+            {
+                question: "What is an Extended Service Set (ESS)?",
+                options: ["Routing table", "Single access point", "Encryption key", "Multiple access points"],
+                correct: 3,
+                feedback: "ESS uses multiple access points for coverage."
+            },
+            {
+                question: "What is WiMAX’s frequency range?",
+                options: ["125–134 kHz", "13.56 MHz", "2–66 GHz", "4 cm"],
+                correct: 2,
+                feedback: "WiMAX operates in 2–66 GHz."
+            },
+            {
+                question: "How are passive RFID tags powered?",
+                options: ["Solar", "Internal battery", "Reader’s RF energy", "External antenna"],
+                correct: 2,
+                feedback: "Passive RFID tags use the reader’s RF energy."
+            },
+            {
+                question: "Which checks MAC addresses at Layer 2?",
+                options: ["telnet", "ipconfig", "arp -a", "netstat"],
+                correct: 2,
+                feedback: "arp -a validates MAC addresses at the Data Link layer."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswer = null;
+
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question').innerText = q.question;
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+            q.options.forEach((option, index) => {
+                const label = document.createElement('label');
+                label.className = 'option';
+                label.innerHTML = `<input type="radio" name="answer" value="${index}" onchange="selectAnswer(${index})"> ${option}`;
+                optionsDiv.appendChild(label);
+            });
+            document.getElementById('submit').classList.remove('hidden');
+            document.getElementById('next').classList.add('hidden');
+            document.getElementById('result').classList.add('hidden');
+            selectedAnswer = null;
+        }
+
+        function selectAnswer(index) {
+            selectedAnswer = index;
+        }
+
+        function submitAnswer() {
+            if (selectedAnswer === null) {
+                alert('Please select an answer!');
+                return;
+            }
+            const q = questions[currentQuestion];
+            const resultDiv = document.getElementById('result');
+            resultDiv.classList.remove('hidden');
+            if (selectedAnswer === q.correct) {
+                score++;
+                resultDiv.innerHTML = `Correct! ${q.feedback}`;
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.innerHTML = `Incorrect. ${q.feedback}`;
+                resultDiv.style.color = 'red';
+            }
+            document.getElementById('submit').classList.add('hidden');
+            document.getElementById('next').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showFinalResult();
+            }
+        }
+
+        function showFinalResult() {
+            const quizContainer = document.querySelector('.quiz-container');
+            quizContainer.innerHTML = `
+                <h1>Quiz Completed!</h1>
+                <div id="result">Your score: ${score} out of ${questions.length} (${((score / questions.length) * 100).toFixed(2)}%)</div>
+                <button id="restart" onclick="restartQuiz()">Restart Quiz</button>
+            `;
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.textAlign = 'center';
+            resultDiv.style.fontSize = '1.2em';
+            if (score / questions.length >= 0.8) {
+                resultDiv.style.color = 'green';
+            } else if (score / questions.length >= 0.6) {
+                resultDiv.style.color = 'orange';
+            } else {
+                resultDiv.style.color = 'red';
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            window.location.reload();
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
