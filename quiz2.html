@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>BUS0005 Week 9–13 Practice Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #020617;
+      --card-bg: #020617;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.15);
+      --correct: #22c55e;
+      --incorrect: #ef4444;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #1d4ed8 0, transparent 45%),
+        radial-gradient(circle at bottom right, #6366f1 0, transparent 50%),
+        #020617;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 980px;
+      border-radius: 24px;
+      padding: 20px 18px 24px;
+      background: radial-gradient(circle at top left, #1e293b, #020617 55%);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow:
+        0 18px 60px rgba(15, 23, 42, 0.8),
+        0 0 0 1px rgba(15, 23, 42, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      margin: 0 0 4px;
+      font-size: 1.4rem;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .controls label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    select,
+    button {
+      font-size: 0.85rem;
+      border-radius: 999px;
+      padding: 7px 12px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+      outline: none;
+    }
+
+    select:focus {
+      box-shadow: 0 0 0 1px var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: 600;
+      border: none;
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.55);
+      transition:
+        transform 0.06s ease,
+        box-shadow 0.06s ease,
+        filter 0.06s ease;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-subtle);
+      box-shadow: none;
+    }
+
+    button:hover {
+      filter: brightness(1.06);
+    }
+
+    button:active {
+      transform: scale(0.97);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.7);
+    }
+
+    #questions-container {
+      margin-top: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 60vh;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .question-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 10px 12px;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .question-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .badge {
+      padding: 2px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.7rem;
+    }
+
+    .question-text {
+      margin: 2px 0 6px;
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .option {
+      border-radius: 999px;
+      padding: 4px 8px;
+      transition: background 0.08s ease;
+    }
+
+    .option:hover {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .option label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .option input[type="radio"] {
+      margin: 0;
+    }
+
+    .feedback {
+      margin-top: 4px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .feedback.correct {
+      color: var(--correct);
+    }
+
+    .feedback.incorrect {
+      color: var(--incorrect);
+    }
+
+    .feedback.not-answered {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    #result-summary {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 10px;
+      }
+
+      .app {
+        padding: 16px 12px 18px;
+      }
+
+      header {
+        gap: 6px 10px;
+      }
+
+      .controls {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      #questions-container {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>BUS0005 Week 9–13 Practice</h1>
+        <p>Multiple choice &amp; true/false review for secure facilities and safety.</p>
+      </div>
+      <div class="controls">
+        <label for="week-select">Focus on:</label>
+        <select id="week-select">
+          <option value="all">All weeks 9–13</option>
+          <option value="9">Week 9 – Budgets &amp; Quantitative FM</option>
+          <option value="10">Week 10 – Emergency Mgmt &amp; Hazards</option>
+          <option value="11">Week 11 – Facility Security Mgmt</option>
+          <option value="12">Week 12 – Contracting &amp; WHMIS</option>
+          <option value="13">Week 13 – RFPs &amp; SOPs</option>
+        </select>
+        <button id="submit-btn">Check answers</button>
+        <button id="reset-btn" class="secondary">Clear answers</button>
+      </div>
+    </header>
+
+    <main id="questions-container" aria-live="polite"></main>
+    <div id="result-summary"></div>
+  </div>
+
+  <script>
+    const questions = [
+      // Week 9 – Quantitative implications & budgets
+      {
+        id: "w9q1",
+        week: "9",
+        format: "mc",
+        text: "According to Roper and Payant (2009), what are the three basic types of budgets used in facility management?",
+        options: [
+          "Administrative, Operational, and Capital",
+          "Strategic, Tactical, and Operational",
+          "Fixed, Variable, and Hybrid",
+          "Short-term, Medium-term, and Long-term"
+        ],
+        correctIndex: 0,
+        explanation:
+          "Week 9 lists administrative, operational, and capital as the three basic budget types."
+      },
+      {
+        id: "w9q2",
+        week: "9",
+        format: "tf",
+        text: "Administrative budgets cover overhead items shared with other departments such as salaries, benefits, training, and office expenses.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Administrative budgets refer to overhead shared with other departments, including salaries, benefits, training, and office costs."
+      },
+      {
+        id: "w9q3",
+        week: "9",
+        format: "mc",
+        text: "Which of the following is the best example of an operational budget item for a facility manager?",
+        options: [
+          "Electricity and routine maintenance for building systems",
+          "Purchase of an additional office building",
+          "Salaries and benefits for HR staff",
+          "Corporate income taxes"
+        ],
+        correctIndex: 0,
+        explanation:
+          "Operational budgets cover funds to perform the FM mission, such as utilities, maintenance and repair, rentals, planning, and design."
+      },
+      {
+        id: "w9q4",
+        week: "9",
+        format: "mc",
+        text: "Which statement about a capital budget is MOST accurate?",
+        options: [
+          "It covers day-to-day utilities and maintenance costs.",
+          "It provides information on major buildings, furnishings, furniture, and equipment the company needs to perform its mission.",
+          "It is only concerned with employee salaries and training.",
+          "It is not affected by company policy or tax laws."
+        ],
+        correctIndex: 1,
+        explanation:
+          "Capital budgets focus on major buildings, furnishings, furniture, and equipment. What can be capitalized depends on company policy and tax laws."
+      },
+      {
+        id: "w9q5",
+        week: "9",
+        format: "mc",
+        text: "In the Week 9 budgeting model, which of the following is NOT one of the four key steps used to manage budgets (Plan, Identify, Validate, Report)?",
+        options: ["Plan", "Identify", "Execute", "Validate"],
+        correctIndex: 2,
+        explanation:
+          "The four steps are Plan, Identify, Validate, and Report. 'Execute' is not one of the named stages in the diagram."
+      },
+      {
+        id: "w9q6",
+        week: "9",
+        format: "tf",
+        text: "Controlling a budget depends on understanding factors that enable control, credibility issues at stake, and comparing accurate, timely actual costs to budget projections.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 9 highlights these three items as key to budget control."
+      },
+
+      // Week 10 – Emergency management & hazards
+      {
+        id: "w10q1",
+        week: "10",
+        format: "mc",
+        text: "According to Roper and Payant (2009), what is the FIRST step in emergency preparation?",
+        options: [
+          "Analyze and modify the plan",
+          "Determine requirements",
+          "Implement the plan",
+          "Rehearse the plan"
+        ],
+        correctIndex: 1,
+        explanation:
+          "The steps are: determine requirements, evaluate requirements, prepare the plan, analyze and modify the plan, implement the plan, and rehearse the plan."
+      },
+      {
+        id: "w10q2",
+        week: "10",
+        format: "mc",
+        text: "In the emergency preparation sequence, which step comes LAST?",
+        options: [
+          "Prepare the plan",
+          "Rehearse the plan",
+          "Evaluate requirements",
+          "Implement the plan"
+        ],
+        correctIndex: 1,
+        explanation:
+          "Rehearsing the plan is the final step so that the organization can practice and refine its response."
+      },
+      {
+        id: "w10q3",
+        week: "10",
+        format: "tf",
+        text: "An organization's geographic location (for example, being in an area with severe weather) should be considered as part of emergency planning under the heading of proximity.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Proximity refers to how location can increase risks, such as severe weather for certain facilities."
+      },
+      {
+        id: "w10q4",
+        week: "10",
+        format: "tf",
+        text: "Cost considerations in emergency planning include how much money management is willing to spend even on low-probability risks.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 10 notes ask how much money management is willing to spend to ensure risks, including low ones, are accounted for."
+      },
+      {
+        id: "w10q5",
+        week: "10",
+        format: "mc",
+        text: "Which question best reflects the idea of organizational culture in emergency planning?",
+        options: [
+          "How many exits does the building have?",
+          "Does the company put strong emphasis and resources on emergencies, or have a history of prior risk occurrences?",
+          "What are the local fire department's response times?",
+          "What is the cost of new emergency lighting?"
+        ],
+        correctIndex: 1,
+        explanation:
+          "Organizational culture is about how much emphasis and resources the company places on emergencies and its history of prior risk events."
+      },
+      {
+        id: "w10q6",
+        week: "10",
+        format: "mc",
+        text: "Under subsection 122.(1) of Part II of the Canada Labour Code, a hazardous substance includes:",
+        options: [
+          "Only flammable liquids and compressed gases.",
+          "Any material that is toxic when ingested, but not inhaled.",
+          "A controlled product and any chemical, biological, or physical agent that, because of its properties, is hazardous to the safety or health of a person exposed to it.",
+          "Only substances that can cause immediate injury, not long-term illness."
+        ],
+        correctIndex: 2,
+        explanation:
+          "The notes quote the Labour Code definition including controlled products and chemical, biological, or physical agents whose properties are hazardous to health or safety."
+      },
+      {
+        id: "w10q7",
+        week: "10",
+        format: "mc",
+        text: "Which of the following is NOT one of the hazardous material categories listed in Week 10?",
+        options: [
+          "Compressed gas",
+          "Flammable and combustible material",
+          "Oxidizing material",
+          "Radioactive and nuclear material"
+        ],
+        correctIndex: 3,
+        explanation:
+          "The six categories listed are compressed gas, flammable and combustible, oxidizing, poisonous and infectious, corrosive, and dangerously reactive."
+      },
+      {
+        id: "w10q8",
+        week: "10",
+        format: "mc",
+        text: "Which formula and set of factors correctly describe risk in the Week 10 notes?",
+        options: [
+          "Risk = hazard ÷ exposure; factors: chemical reactivity and colour",
+          "Risk = seriousness of hazard × amount of exposure; factors: seriousness of hazard and amount of exposure",
+          "Risk = cost × distance; factors: proximity and budget",
+          "Risk = likelihood ÷ consequence; factors: probability and time of day"
+        ],
+        correctIndex: 1,
+        explanation:
+          "Risk is defined as the likelihood that a hazardous material will cause harm, with risk = seriousness of hazard × amount of exposure. Amount of exposure involves duration, concentration, and route (inhalation, skin contact, ingestion)."
+      },
+      {
+        id: "w10q9",
+        week: "10",
+        format: "mc",
+        text: "In the notes on hazards and threats, which statement is TRUE?",
+        options: [
+          "A hazard releases a threat, and all hazards are threats.",
+          "A threat releases a hazard, but a hazard is not necessarily a threat.",
+          "Hazards and threats are completely unrelated concepts.",
+          "Threats only exist in cybersecurity, not in physical safety."
+        ],
+        correctIndex: 1,
+        explanation:
+          "The notes state that a threat releases a hazard, but a hazard is not necessarily a threat. A hazard is a condition or object with the potential to cause or contribute to an incident or accident."
+      },
+
+      // Week 11 Part 1 – Facility security management & defence in depth
+      {
+        id: "w11q1",
+        week: "11",
+        format: "mc",
+        text: "Which combination lists the three key attributes of a secure facility discussed in Week 11?",
+        options: [
+          "People, Process, and Technology",
+          "Policies, Procedures, and Policing",
+          "Hardware, Software, and Networks",
+          "Risk, Threat, and Vulnerability"
+        ],
+        correctIndex: 0,
+        explanation:
+          "The attributes of a secure facility are people, process, and technologies."
+      },
+      {
+        id: "w11q2",
+        week: "11",
+        format: "tf",
+        text: "In this course, 'process' is defined as a series of activities or steps taken in order to achieve a particular end.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 11 defines process as a series of activities or steps taken to achieve a particular end."
+      },
+      {
+        id: "w11q3",
+        week: "11",
+        format: "tf",
+        text: "The 'people' attribute of a secure facility includes the facility manager as well as building users, maintenance staff, and other roles involved in managing the facility.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "People include the facility manager and other roles and personas involved in managing the facility."
+      },
+      {
+        id: "w11q4",
+        week: "11",
+        format: "mc",
+        text: "People + Process + Technologies = ______.",
+        options: [
+          "Total Quality Management",
+          "Risk Management",
+          "Defence in Depth",
+          "Business Continuity"
+        ],
+        correctIndex: 2,
+        explanation:
+          "The notes explicitly combine people, process, and technologies into the concept of defence in depth."
+      },
+      {
+        id: "w11q5",
+        week: "11",
+        format: "tf",
+        text: "Defence in depth is a cybersecurity strategy that uses multiple layers of security, with multiple independent layers of defence for all facility conditions.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 11 describes defence in depth as a strategy using multiple, independent layers of security."
+      },
+      {
+        id: "w11q6",
+        week: "11",
+        format: "mc",
+        text: "According to the Cybersecurity and Infrastructure Security Agency (CISA), defence in depth is best described as:",
+        options: [
+          "A single technical firewall that stops all attacks.",
+          "A combination of people, technology, operations, and adversarial awareness, supported by overlapping controls that must be exercised, evaluated, and improved.",
+          "A method for reducing hardware costs by outsourcing IT.",
+          "A policy that only applies to government facilities."
+        ],
+        correctIndex: 1,
+        explanation:
+          "CISA emphasizes that defence in depth is not one thing, but a combination of people, technology, operations, and adversarial awareness with overlapping controls."
+      },
+      {
+        id: "w11q7",
+        week: "11",
+        format: "mc",
+        text: "Which of the following is an example of an ADMINISTRATIVE control in defence in depth?",
+        options: [
+          "Installing fingerprint scanners on server room doors",
+          "Using CCTV cameras in parking lots",
+          "Documented security policies and procedures for staff",
+          "Configuring network firewalls and anti-malware software"
+        ],
+        correctIndex: 2,
+        explanation:
+          "Administrative controls are policies and procedures put in place to minimize vulnerabilities."
+      },
+      {
+        id: "w11q8",
+        week: "11",
+        format: "mc",
+        text: "Which option best represents a PHYSICAL control?",
+        options: [
+          "Password complexity policy",
+          "Locking server rooms and using key cards to enter a building",
+          "Security awareness training",
+          "Intrusion detection software"
+        ],
+        correctIndex: 1,
+        explanation:
+          "Physical controls involve physically securing access, such as locked server rooms and key cards for entry."
+      },
+      {
+        id: "w11q9",
+        week: "11",
+        format: "mc",
+        text: "Which of the following is listed as a functional competency for facility managers in the Week 11 notes?",
+        options: [
+          "Good judgement and the ability to deliver timely results under pressure",
+          "Avoiding communication to reduce email traffic",
+          "Working only independently and never in teams",
+          "Focusing only on technical skills and not leadership"
+        ],
+        correctIndex: 0,
+        explanation:
+          "The notes list communication, leadership and strategy, good judgement, being proactive and reactive, and delivering timely results under pressure."
+      },
+      {
+        id: "w11q10",
+        week: "11",
+        format: "tf",
+        text: "Functional characteristics are job-specific capabilities, knowledge, skills, and personal characteristics necessary for successful job performance.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 11 defines functional characteristics in exactly this way."
+      },
+
+      // Week 11 Part 2 – Complex secure facilities
+      {
+        id: "w11bq1",
+        week: "11",
+        format: "mc",
+        text: "Which of the following best describes a COMPLEX secure facility?",
+        options: [
+          "A small office with a single entrance and no special risks",
+          "A facility that includes physical and cyber protection measures to protect a building housing people, processes, and technology",
+          "Any building that has more than two floors",
+          "A facility that only focuses on IT systems and ignores people and processes"
+        ],
+        correctIndex: 1,
+        explanation:
+          "A complex secure facility includes physical and cyber protection mechanisms to protect a building or location that houses people, process, and technology."
+      },
+      {
+        id: "w11bq2",
+        week: "11",
+        format: "mc",
+        text: "According to Week 11 Part 2, what is one reason a system or facility might be considered COMPLEX?",
+        options: [
+          "It uses only one type of technology.",
+          "It has a lot of moving parts and is multi-disciplinary, involving many types of people, processes, or technologies.",
+          "It is always more expensive than other systems.",
+          "It is simple to understand but time-consuming."
+        ],
+        correctIndex: 1,
+        explanation:
+          "The notes say something is complex when there are many moving parts, ties to broader strategies, and many types of people, processes, or technologies (multi-disciplinary)."
+      },
+      {
+        id: "w11bq3",
+        week: "11",
+        format: "mc",
+        text: "Which of the following is a characteristic of a complex secure facility listed in the notes?",
+        options: [
+          "It presents high safety and security risks to employees and personnel.",
+          "Failure of any component has no real consequences.",
+          "It avoids using advanced technology.",
+          "It is completely independent of other facilities and systems."
+        ],
+        correctIndex: 0,
+        explanation:
+          "The notes list characteristics such as high safety and security risks, disastrous consequences if components fail, extensive perimeter security, blast-resistant construction, multipurpose use, interdependence, and reliance on technology."
+      },
+      {
+        id: "w11bq4",
+        week: "11",
+        format: "tf",
+        text: "In the notes, 'complexity' refers to having many components or moving parts, while 'complicated' refers to a high level of difficulty.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 11 explicitly contrasts complexity (many moving parts) with complicated (high difficulty)."
+      },
+      {
+        id: "w11bq5",
+        week: "11",
+        format: "mc",
+        text: "The secure facilities model introduced in Week 11 Part 2 takes into account which set of elements?",
+        options: [
+          "Facility management components, attributes, security components, and complexity",
+          "Only the building's age and location",
+          "Marketing, finance, and human resources",
+          "IT hardware, software, and databases"
+        ],
+        correctIndex: 0,
+        explanation:
+          "The model considers facility management components, attributes, security components, and complexity."
+      },
+      {
+        id: "w11bq6",
+        week: "11",
+        format: "mc",
+        text: "Under the 'complexity' section of the model, which of the following is NOT one of the security categories listed?",
+        options: [
+          "Technology security",
+          "Operational security",
+          "Financial security",
+          "Physical security"
+        ],
+        correctIndex: 2,
+        explanation:
+          "The diagram shows technology security, operational security, and physical security, not financial security."
+      },
+
+      // Week 12 Part 1 – RFI, RFP, RFQ
+      {
+        id: "w12q1",
+        week: "12",
+        format: "mc",
+        text: "What is the PRIMARY purpose of a Request for Information (RFI)?",
+        options: [
+          "Buying a specific item at the lowest price",
+          "Doing research or exploring the market or industry",
+          "Evaluating employee performance",
+          "Negotiating final contract terms with a chosen supplier"
+        ],
+        correctIndex: 1,
+        explanation:
+          "The RFI is used to do research or explore the market or industry and gather information."
+      },
+      {
+        id: "w12q2",
+        week: "12",
+        format: "mc",
+        text: "Which document is typically used for EVALUATING strategic suppliers and requesting further information about their proposals?",
+        options: ["RFI", "RFP", "RFQ", "Purchase order"],
+        correctIndex: 1,
+        explanation:
+          "The RFP is used for evaluating strategic suppliers and requesting more detailed information."
+      },
+      {
+        id: "w12q3",
+        week: "12",
+        format: "mc",
+        text: "Which document is most appropriate when an organization is buying a specific item and is looking for the lowest price?",
+        options: ["RFI", "RFP", "RFQ", "Memorandum of understanding"],
+        correctIndex: 2,
+        explanation:
+          "The RFQ is used when buying a specific item or when the buyer is looking for the lowest price."
+      },
+      {
+        id: "w12q4",
+        week: "12",
+        format: "tf",
+        text: "The outcome of an RFI is mainly to provide information or education to the buyer about the market.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "The table notes that the outcome of an RFI is to provide information or education."
+      },
+      {
+        id: "w12q5",
+        week: "12",
+        format: "mc",
+        text: "Which of the following is NOT typically listed as part of an RFP's contents in Week 12?",
+        options: [
+          "Overview and context of the proposal",
+          "Project deliverables and level of service desired",
+          "Client requirements and guidelines for submission",
+          "Employee vacation schedules for the proposing company"
+        ],
+        correctIndex: 3,
+        explanation:
+          "The RFP contents include overview, context, deliverables/level of service, client requirements, guidelines for submission, and other mandatory areas, not staff vacation schedules."
+      },
+
+      // Week 12 Part 2 – WHMIS & safety
+      {
+        id: "w12bq1",
+        week: "12",
+        format: "tf",
+        text: "A product is considered hazardous under WHMIS if it has one or more of the following properties: flammable/combustible, explosive/reactive, corrosive, or toxic.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 12 lists these four properties as making a product hazardous."
+      },
+      {
+        id: "w12bq2",
+        week: "12",
+        format: "mc",
+        text: "Which pairing of property and description is correct according to the Week 12 notes?",
+        options: [
+          "Flammable/combustible – can easily be set on fire",
+          "Explosive/reactive – causes only mild skin irritation",
+          "Corrosive – always safe to handle without PPE",
+          "Toxic – causes only temporary property damage"
+        ],
+        correctIndex: 0,
+        explanation:
+          "The table describes flammable/combustible materials as those that can easily be set on fire."
+      },
+      {
+        id: "w12bq3",
+        week: "12",
+        format: "mc",
+        text: "WHMIS (Workplace Hazardous Materials Information System) is best described as:",
+        options: [
+          "An American system that focuses only on chemical labels for consumers",
+          "A Canadian system that provides information to employers and workers about hazardous materials that exist and are used in the workplace",
+          "A software program used only by facility managers",
+          "A system that applies only to transportation of materials, not workplaces"
+        ],
+        correctIndex: 1,
+        explanation:
+          "The notes describe WHMIS as a Canadian system providing information to employers and workers about hazardous materials in the workplace."
+      },
+      {
+        id: "w12bq4",
+        week: "12",
+        format: "mc",
+        text: "Which of the following is listed as one of the main elements of a WHMIS program by the Canadian Centre for Occupational Health and Safety (CCOHS)?",
+        options: [
+          "Purchasing and inventory of hazardous products",
+          "Executive compensation planning",
+          "Social media marketing strategy",
+          "Travel booking procedures"
+        ],
+        correctIndex: 0,
+        explanation:
+          "The main elements include purchasing and inventory, hazard identification, inspections, worker education and training, review and evaluation, and document and record keeping."
+      },
+      {
+        id: "w12bq5",
+        week: "12",
+        format: "tf",
+        text: "In the Week 12 notes, 'education' refers to general information, while 'training' refers to site- and job-specific information.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "CCOHS distinguishes education (general) from training (site- and job-specific)."
+      },
+
+      // Week 13 – SOPs and RFPs
+      {
+        id: "w13q1",
+        week: "13",
+        format: "tf",
+        text: "Standard Operating Procedures (SOPs) are widely used or accepted procedures and processes related to the functional management of an organization's operations.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 13 defines SOPs as widely used or accepted procedures related to managing operations."
+      },
+      {
+        id: "w13q2",
+        week: "13",
+        format: "mc",
+        text: "How do SOPs contribute to due diligence according to the notes?",
+        options: [
+          "They replace the need for any legal obligations.",
+          "They document reasonable steps taken to meet legal obligations by clearly advising employees of protocols that contribute to safety.",
+          "They are used only for budgeting and finance.",
+          "They are optional and have no legal relevance."
+        ],
+        correctIndex: 1,
+        explanation:
+          "Due diligence involves reasonable steps to satisfy legal obligations. SOPs help by clearly sharing safety-related protocols with employees."
+      },
+      {
+        id: "w13q3",
+        week: "13",
+        format: "mc",
+        text: "Which of the following types of information is specifically mentioned as being included in an SOP?",
+        options: [
+          "Training, roles and responsibilities, command structures, standards of performance, emergency protocols, and contact information for questions",
+          "Employee hobbies and interests",
+          "Company stock price history",
+          "Only emergency contact phone numbers"
+        ],
+        correctIndex: 0,
+        explanation:
+          "Week 13 lists these items as information the SOP provides."
+      },
+      {
+        id: "w13q4",
+        week: "13",
+        format: "tf",
+        text: "One purpose of SOPs is to support consistency and quality assurance by ensuring everyone has a consistent understanding of what is required and helping to avoid errors.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Consistency and quality assurance are key benefits of SOPs, helping avoid errors."
+      },
+      {
+        id: "w13q5",
+        week: "13",
+        format: "mc",
+        text: "When developing SOPs, which of the following characteristics is emphasized in the Week 13 notes?",
+        options: [
+          "They should be clear and understandable to the intended audience.",
+          "They should be written once and never revised.",
+          "They should be kept secret from employees.",
+          "They should use as much technical jargon as possible."
+        ],
+        correctIndex: 0,
+        explanation:
+          "The notes say SOPs should be clear, audible, and communicate to their intended audience."
+      },
+      {
+        id: "w13q6",
+        week: "13",
+        format: "tf",
+        text: "If there is confusion about a specific section or subsection of an SOP, the notes say it is a candidate for review.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Confusing sections are specifically mentioned as needing review."
+      },
+      {
+        id: "w13q7",
+        week: "13",
+        format: "tf",
+        text: "SOPs should be accurate and recent, meaning they are constantly revised to reflect the latest state of the organization's operations and processes.",
+        options: ["True", "False"],
+        correctIndex: 0,
+        explanation:
+          "Week 13 stresses that SOPs must be accurate, recent, and regularly updated."
+      },
+      {
+        id: "w13q8",
+        week: "13",
+        format: "mc",
+        text: "Why does the Week 13 material say SOPs should be descriptive in nature?",
+        options: [
+          "Because longer documents are always better.",
+          "Because describing procedures in enough detail helps employees who are not familiar with the environment and makes it more likely they will retain the content.",
+          "So that only experts can understand them.",
+          "To make them harder to audit."
+        ],
+        correctIndex: 1,
+        explanation:
+          "The notes say the more descriptive the SOP is, the more likely its contents can be retained by employees unfamiliar with the environment."
+      }
+    ];
+
+    function renderQuestions(filterWeek) {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      const filtered = questions.filter(
+        (q) => filterWeek === "all" || q.week === filterWeek
+      );
+
+      filtered.forEach((q, index) => {
+        const card = document.createElement("div");
+        card.className = "question-card";
+        card.dataset.id = q.id;
+
+        const meta = document.createElement("div");
+        meta.className = "question-meta";
+        const formatLabel =
+          q.format === "tf" ? "True / False" : "Multiple choice";
+        meta.innerHTML = `<span class="badge">Week ${q.week}</span><span>${formatLabel}</span>`;
+        card.appendChild(meta);
+
+        const textEl = document.createElement("p");
+        textEl.className = "question-text";
+        textEl.textContent = `Q${index + 1}. ${q.text}`;
+        card.appendChild(textEl);
+
+        const optionsDiv = document.createElement("div");
+        optionsDiv.className = "options";
+
+        q.options.forEach((opt, optIndex) => {
+          const optionWrapper = document.createElement("div");
+          optionWrapper.className = "option";
+
+          const label = document.createElement("label");
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = q.id;
+          input.id = `${q.id}-${optIndex}`;
+          input.value = String(optIndex);
+
+          label.setAttribute("for", input.id);
+          label.appendChild(input);
+          label.appendChild(document.createTextNode(opt));
+
+          optionWrapper.appendChild(label);
+          optionsDiv.appendChild(optionWrapper);
+        });
+
+        card.appendChild(optionsDiv);
+
+        const feedback = document.createElement("div");
+        feedback.className = "feedback";
+        card.appendChild(feedback);
+
+        container.appendChild(card);
+      });
+
+      document.getElementById("result-summary").textContent = "";
+    }
+
+    function clearAnswers() {
+      const inputs = document.querySelectorAll(
+        "#questions-container input[type='radio']"
+      );
+      inputs.forEach((input) => {
+        input.checked = false;
+      });
+
+      const feedbackEls = document.querySelectorAll(".feedback");
+      feedbackEls.forEach((fb) => {
+        fb.textContent = "";
+        fb.className = "feedback";
+      });
+
+      document.getElementById("result-summary").textContent = "";
+    }
+
+    function gradeQuiz() {
+      const weekSelect = document.getElementById("week-select");
+      const selectedWeek = weekSelect.value;
+
+      const relevantQuestions = questions.filter(
+        (q) => selectedWeek === "all" || q.week === selectedWeek
+      );
+
+      let correct = 0;
+      let attempted = 0;
+
+      relevantQuestions.forEach((q) => {
+        const card = document.querySelector(
+          `.question-card[data-id="${q.id}"]`
+        );
+        if (!card) return;
+
+        const inputs = card.querySelectorAll(`input[name="${q.id}"]`);
+        let chosenIndex = null;
+
+        inputs.forEach((input) => {
+          if (input.checked) {
+            chosenIndex = parseInt(input.value, 10);
+          }
+        });
+
+        const feedback = card.querySelector(".feedback");
+        if (chosenIndex === null) {
+          feedback.textContent = "Not answered.";
+          feedback.className = "feedback not-answered";
+          return;
+        }
+
+        attempted += 1;
+
+        if (chosenIndex === q.correctIndex) {
+          correct += 1;
+          feedback.textContent =
+            "Correct! " + (q.explanation ? q.explanation : "");
+          feedback.className = "feedback correct";
+        } else {
+          const correctText = q.options[q.correctIndex];
+          const extra = q.explanation ? " " + q.explanation : "";
+          feedback.textContent =
+            'Incorrect. Correct answer: "' + correctText + '".' + extra;
+          feedback.className = "feedback incorrect";
+        }
+      });
+
+      const total = relevantQuestions.length;
+      const resultSummary = document.getElementById("result-summary");
+
+      if (total === 0) {
+        resultSummary.textContent = "No questions loaded.";
+        return;
+      }
+
+      const percent = Math.round((correct / total) * 100);
+      resultSummary.textContent =
+        "You got " +
+        correct +
+        " / " +
+        total +
+        " correct (attempted " +
+        attempted +
+        "). Score: " +
+        percent +
+        "%.";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const weekSelect = document.getElementById("week-select");
+      renderQuestions(weekSelect.value);
+
+      document
+        .getElementById("submit-btn")
+        .addEventListener("click", gradeQuiz);
+
+      document
+        .getElementById("reset-btn")
+        .addEventListener("click", () => {
+          clearAnswers();
+        });
+
+      weekSelect.addEventListener("change", () => {
+        renderQuestions(weekSelect.value);
+      });
+    });
+  </script>
+</body>
+
+</html>
